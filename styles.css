@@ -121,7 +121,7 @@ footer {
   margin: 0 10px; /* espacio horizontal entre botones */
   border-radius: 50%;
   background-color: #ffffff;
-  color: #16F20F;
+  color: #000000;
   justify-content: center;
   align-items: center;
   font-size: 22px;
@@ -169,9 +169,9 @@ body {
   text-align: center;
 }
 
-.video-incrustado {
+.seccion-video{
   width: 100%;
-  max-width: 200px;  /* Ajustá este valor a tu gusto (200px, 250px, etc.) */
+  max-width: 500px;  /* Ajustá este valor a tu gusto (200px, 250px, etc.) */
   height: auto;       /* Mantiene la proporción del video */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -186,14 +186,266 @@ body {
 }
 
 
+/*-------*/
 
-/*accesorios*/
+.razones-gr86 {
+  background-color: #fff;
+  padding: 60px 20px;
+  color: #000;
+  text-align: center;
+}
+
+.razones-gr86 h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.contenedor-razones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.razon {
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: left;
+}
+
+.razon img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.razon h3 {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.razon p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/*video con data */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px;
+}
+
+/* Contenedor principal: video + texto */
+.video-texto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Video */
+.video-container {
+  flex: 1 1 400px;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Texto */
+.texto-container {
+  flex: 1 1 400px;
+}
+
+.texto-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.texto-container h2 {
+  font-size: 20px;
+  color: #16F20F;
+  margin-bottom: 15px;
+}
+
+.texto-container p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-texto {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .texto-container h1,
+  .texto-container h2 {
+    text-align: center;
+  }
+}
 
 
+/*lista*/
 
 
-/*nosotros*/
+/* Reset y estilo base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
+.encabezado {
+  text-align: center;
+  margin-top: 80px;   /* <-- separa del menú de arriba */
+  margin-bottom: 40px;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #000000;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.lista-marcas {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Encabezado */
+.lista-marcas h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Lista horizontal en filas */
+.lista-marcas ul {
+  display: flex;
+  flex-wrap: wrap;         /* Permite que los elementos bajen a la siguiente línea */
+  gap: 10px 20px;          /* Espaciado entre items: vertical y horizontal */
+  list-style-type: disc;   /* Viñetas */
+  padding-left: 20px;
+}
+
+.lista-marcas li {
+  font-size: 16px;
+  width: auto;
+  white-space: nowrap;     /* Evita que el nombre se corte en 2 líneas */
+}
+
+
+/*cuadro*/
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #ffffff;
+  padding: 40px 20px;
+}
+
+/* Estilo para encabezado */
+.encabezado {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Título principal */
+.encabezado h1 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* Subtítulo h2 */
+.encabezado h2 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Subtítulo h3 */
+.encabezado h3 {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+
+.encabezado {
+  background-color: #000000; /* Fondo claro (cambiá este color si querés otro) */
+  color: #222;               /* Texto oscuro */
+  padding: 40px 20px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+  border-radius: 8px;        /* Opcional: bordes redondeados */
+}
 
 /*motos*/
+/* Estilo para la tabla */
+.tabla-motos {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.tabla-motos h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #16F20F;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #16F20F;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+}
+/*hasta aca seria lo mio jeremias*/
