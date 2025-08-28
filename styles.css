@@ -1,5 +1,191 @@
 /*inicio de pagina*/
 
+/* --- INTRO --- */
+body {
+  padding: 0;
+  overflow-x: hidden;
+  margin: 0;
+  background-color: #ffffff;
+  /* quitamos height, display:flex y overflow */
+}
+
+
+.logo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  width: 250px;
+  opacity: 0;
+  animation: slideZoomExit 4s ease forwards;
+}
+
+@keyframes slideZoomExit {
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw) scale(0.5);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(0) scale(1.1);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100vw) scale(0.8);
+  }
+}
+
+/* Contenido principal oculto al inicio */
+.content {
+  opacity: 0;
+  animation: showContent 1s ease forwards;
+  animation-delay: 4s; /* aparece después de que el logo se va */
+  text-align: center;
+  color: #000;
+}
+
+@keyframes showContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- HEADER (MENÚ) --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0EA608;
+  padding: 10px 20px;
+}
+
+header .logo-header img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* --- MAIN --- */
+main {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #16F20F;
+  text-align: center; /* centra los botones en el footer */
+  padding: 20px 10px;
+  margin-top: 40px;
+}
+
+.social-buttons {
+  /* para asegurarnos que los botones estén en línea y centrados */
+  display: inline-block; /* o flex con justify-content */
+}
+
+.social-btn {
+  display: inline-flex; /* para alinear icono dentro */
+  width: 50px;
+  height: 50px;
+  margin: 0 10px; /* espacio horizontal entre botones */
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #16F20F;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+/*hasta aca*/
+
+/*--------------------------------------------------------/*
+
+/*datos de pagina*/
+
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Sección del video */
+.seccion-video {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.video-incrustado {
+  width: 100%;
+  max-width: 200px;  /* Ajustá este valor a tu gusto (200px, 250px, etc.) */
+  height: auto;       /* Mantiene la proporción del video */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: block;
+  margin: 0 auto;     /* Centra el video horizontalmente */
+}
+
+/* Sección extra debajo del video */
+.contenido-extra {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+
 
 /*accesorios*/
 
