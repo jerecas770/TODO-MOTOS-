@@ -48,7 +48,7 @@ body {
   animation: showContent 1s ease forwards;
   animation-delay: 4s; /* aparece después de que el logo se va */
   text-align: center;
-  color: #000;
+  color: #000000;
 }
 
 @keyframes showContent {
@@ -65,7 +65,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0EA608;
+  background-color: #09ff00;
   padding: 10px 20px;
 }
 
@@ -161,7 +161,7 @@ body {
   line-height: 1.6;
 }
 
-/* Sección del video */
+/* Sección del video (el contenedor) */
 .seccion-video {
   width: 100%;
   padding: 40px 20px;
@@ -169,14 +169,15 @@ body {
   text-align: center;
 }
 
-.seccion-video{
+/* Estilo SOLO para el video dentro de la sección */
+.seccion-video video {
   width: 100%;
-  max-width: 500px;  /* Ajustá este valor a tu gusto (200px, 250px, etc.) */
-  height: auto;       /* Mantiene la proporción del video */
+  max-width: 1000px;  /* 🔹 Cambiá este valor (ej: 300px) para hacerlo más chico */
+  height: auto;      /* Mantiene proporción */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   display: block;
-  margin: 0 auto;     /* Centra el video horizontalmente */
+  margin: 0 auto;
 }
 
 /* Sección extra debajo del video */
@@ -184,6 +185,7 @@ body {
   padding: 40px 20px;
   text-align: center;
 }
+
 
 /*-------*/
 
@@ -376,7 +378,7 @@ body {
 /* Estilo para encabezado */
 .encabezado {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 /* Título principal */
@@ -401,65 +403,14 @@ body {
 
 
 .encabezado {
-  background-color: #000000; /* Fondo claro (cambiá este color si querés otro) */
+  background-color: #000000; /* Fondo claro */
   color: #222;               /* Texto oscuro */
   padding: 40px 20px;
-  margin-top: 80px;
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 20px;
   text-align: center;
-  border-radius: 8px;        /* Opcional: bordes redondeados */
+  border-radius: 1px;        /* Opcional: bordes redondeados */
 }
-
-
-
-/*accesorios*/
-
-.Lista_Input_Accesorios[type="checkbox"] {
-      display: none;
-}
-
-.La_Menu_Accesorios {
-      display: block;
-      font-size: 1.5em;
-      font-weight: bold;
-      cursor: pointer;
-      background-color: #eee;
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 5px;
-}
-
-.Lista_Accesorios {
-      display: none;
-      margin-left: 20px;
-      list-style-type: none;
-    padding-left: 0;
-}
-
-#Menu_Protecciones:checked + .La_Menu_Accesorios + #Protecciones {
-      display: block;
-}
-
-#Menu_Visibilidad:checked + .La_Menu_Accesorios + #Visibilidad {
-      display: block;
-}
-
-#Menu_Almacenamiento:checked + .La_Menu_Accesorios + #Almacenamiento {
-      display: block;
-}
-
-#Menu_Tecnologia:checked + .La_Menu_Accesorios + #Tecnologia {
-      display: block;
-}
-
-#Menu_Seguridad:checked + .La_Menu_Accesorios + #Seguridad {
-      display: block;
-}
-
-
-/*nosotros*/
-
-
 
 /*motos*/
 /* Estilo para la tabla */
@@ -499,3 +450,40 @@ tr:hover {
   background-color: #f0f0f0;
 }
 /*hasta aca seria lo mio jeremias*/
+
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 50px; /* Más fino */
+  background: #000; /* Fondo negro */
+  display: flex;
+  align-items: center;
+  margin: 20px 0; /* separación arriba y abajo */
+}
+
+.marquee {
+  display: flex;
+  animation: marquee-scroll 15s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  padding-right: 50px; /* espacio entre repeticiones */
+}
+
+/* Animación */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/*hasta aca es lo mio jeremias sigan de aca para delnate*/
+
