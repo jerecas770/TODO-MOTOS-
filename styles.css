@@ -412,48 +412,80 @@ body {
 
 
 
-/*accesorios*/
+/*-----------------------------Accesorios------------------------------*/
+
+#Body_Accesorios{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+}
+
+#Cuerpo_Accesorios{
+  display: flex;
+  align-items: flex-start; 
+  gap: 20px; 
+}
+
+#Left_Accesorios_Menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; 
+  height: 100vh; 
+  background-color: #f5f5f5;
+  padding: 15px;
+  overflow-y: auto; 
+}
+
+#Right_Accesorios {
+  margin-left: 250px; 
+  padding: 15px;
+}
+
+#H2_Accesorios{
+  text-align: center;
+
+}
 
 .Lista_Input_Accesorios[type="checkbox"] {
-      display: none;
+  display: none;
 }
 
 .La_Menu_Accesorios {
-      display: block;
-      font-size: 1.5em;
-      font-weight: bold;
-      cursor: pointer;
-      background-color: #eee;
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 5px;
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #d1cdcd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
 
 .Lista_Accesorios {
-      display: none;
-      margin-left: 20px;
-      list-style-type: none;
-    padding-left: 0;
+  display: none;
+  margin-left: 20px;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 #Menu_Protecciones:checked + .La_Menu_Accesorios + #Protecciones {
-      display: block;
+  display: block;
 }
 
 #Menu_Visibilidad:checked + .La_Menu_Accesorios + #Visibilidad {
-      display: block;
+  display: block;
 }
 
 #Menu_Almacenamiento:checked + .La_Menu_Accesorios + #Almacenamiento {
-      display: block;
+  display: block;
 }
 
 #Menu_Tecnologia:checked + .La_Menu_Accesorios + #Tecnologia {
-      display: block;
+  display: block;
 }
 
 #Menu_Seguridad:checked + .La_Menu_Accesorios + #Seguridad {
-      display: block;
+  display: block;
 }
 
 
