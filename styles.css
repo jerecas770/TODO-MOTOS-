@@ -489,15 +489,15 @@ body {
   display: block;
 }
 
-#Info_Cascos{
+#Info_Cascos .Info_Cascos_Flex{
   display: flex;
 }
 
-#Info_Cascos div{
+.Info_Cascos_Flex div{
   width: 250px;
   height: auto;
   background-color: #ffffff;
-  margin: 0 10px 0 10px;
+  margin: 10px 10px 10px 10px;
 }
 
 
