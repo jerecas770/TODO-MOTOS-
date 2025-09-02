@@ -422,22 +422,22 @@ body {
 
 #Cuerpo_Accesorios{
   display: flex;
-  align-items: flex-start; 
-  gap: 20px; 
 }
 
 #Left_Accesorios_Menu {
   position: fixed;
-  top: 80px;
+  top: 0px;
   left: 0;
   width: 250px; 
-  height: calc(100vh-80px); 
+  height: 100vh; 
   background-color: #f5f5f5;
   padding: 15px;
   overflow-y: auto; 
 }
 
 #Right_Accesorios {
+  overflow-y: auto;
+  height: 100%;
   margin-left: 220px; 
   padding: 15px;
 }
@@ -489,11 +489,11 @@ body {
   display: block;
 }
 
-#Info_Cascos .Info_Cascos_Flex{
+ .Info_Flex{
   display: flex;
 }
 
-.Info_Cascos_Flex div{
+.Info_Flex a{
   width: 250px;
   height: auto;
   background-color: #ffffff;
@@ -501,12 +501,14 @@ body {
 }
 
 
-#Info_Cascos img{
+.Info_Flex img{
   display: block;
   margin: 0 auto;
   width: 180px;
   height: 180px;
 }
+
+
 
 /*nosotros*/
 
