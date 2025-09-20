@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: radial-gradient(circle, #271ff7, #04b0ce);
+            
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 8px;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+        
+</head>
+<body>
+    <form method="post">
+        <h2>Iniciar Sesión</h2>
+
+        Usuario: <input type="text" id="username" name="username" placeholder="Ingrese su usuario o correo electronico" required><br><br>
+
+        Contraseña: <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required><br><br>
+        <input type="submit" value="Iniciar Sesión">
+
+    </form>
+</body>
+</html>
