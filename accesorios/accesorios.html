@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="HTML_Accesorios">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,102 +11,95 @@
     <title>Accesorios</title>
 </head>
 <body id="Body_Accesorios">
-<!-- futuro encabezado "Accesorios para tu moto: estilo, seguridad y rendimiento"-->
-<!-- Mismo menu y footer que el archivo INDEX-->
-  <div class="Content_Accesorios">
+
+  <video id="Video_body_Accesorio" src="Video_Left.mp4" autoplay muted loop></video>
+  
+
+  <div id="Content_Accesorios" > 
+    <div id="Div_Encabezado">
+      <div id="Div_H1_Accesorios">
+        <h1 id="H1_Accesorios">ACCESORIOS</h1>
+      </div>
+      <ul id="Ul_Menu_Accesorios">
+        <li class="Li_Menu_Accesorios"><a href="#header_accesorios">Inicio</a>
+        </li>
+
+        <li class="Li_Menu_Accesorios"><a href="#">Protecciones</a>
+          <ul class="ul_submenu_accesorios">
+            <li class="li_submenu_accesorios"><a href="#Info_Cascos">Cascos</a></li>
+            <li class="li_submenu_accesorios"><a href="#Info_Guantes">Guantes</a></li>
+          </ul>
+        </li>
+        <li class="Li_Menu_Accesorios"><a href="#">Visibilidad</a>
+          <ul class="ul_submenu_accesorios">
+            <li class="li_submenu_accesorios"><a href="#Info_Antiparras">Antiparras</a></li>
+            <li class="li_submenu_accesorios"><a href="#Info_Visores">Visores</a></li>
+          </ul>
+        </li>
+        <li class="Li_Menu_Accesorios"><a href="#">Almacenamiento</a>
+          <ul class="ul_submenu_accesorios">
+            <li class="li_submenu_accesorios"><a href="#Info_Baules">Baules</a></li>
+          </ul>
+        </li>
+        <li class="Li_Menu_Accesorios"><a href="#">Tecnologia_y_Seguridad</a>
+          <ul class="ul_submenu_accesorios">
+            <li class="li_submenu_accesorios"><a href="#Info_GPS">GPS</a></li>
+            <li class="li_submenu_accesorios"><a href="#Info_Camaras">Camaras</a></li>
+            <li class="li_submenu_accesorios"><a href="#Info_Cadenas">Cadenas</a></li>
+            <li class="li_submenu_accesorios"><a href="#Info_Alarmas">Alarmas</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+    
+    <!-- Mismo menu y footer que el archivo INDEX-->
     <!-- Menú -->
-    <header>
+    <header id="header_accesorios">
       <div class="logo-header">
         <img src="../logopng.png" alt="Logo Todomotos">
       </div>
+
       <nav>
         <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="#">Motos</a></li>
-          <li><a href="#">Nosotros</a></li>
+          <li><a href="../index.html">INICIO</a></li>
+          <li><a href="#">MOTOS</a></li>
+          <li><a href="#">NOSOTROS</a></li>
         </ul>
       </nav>
-    </header>
+    </header><br>
 
-    <!-- Cuerpo principal -->
 
-    <div id="Cuerpo_Accesorios">
-      <div id="Left_Accesorios_Menu">
-        <!-- Lista de accesorios -->
-        <ul id="Lista_Menu_Accesorios"><h2 id="H2_Accesorios">Accesorios</h2>
-          
-          <input class="Lista_Input_Accesorios" type="checkbox" id="Menu_Protecciones">
-          <label class="La_Menu_Accesorios" for="Menu_Protecciones">Protecciones</label>
-          <ul id="Protecciones" class="Lista_Accesorios">
-            <li><a href="#Info_Cascos">Cascos</a></li>
-            <li><a href="#Info_Guantes">Guantes</a></li>
-            <li>Rodilleras</li>
-            <li>Chalecos</li>
-          </ul>
-          
-          <input class="Lista_Input_Accesorios" type="checkbox" id="Menu_Visibilidad">
-          <label class="La_Menu_Accesorios" for="Menu_Visibilidad">Visibilidad</label>
-          <ul id="Visibilidad" class="Lista_Accesorios">
-            <li>Antiparras</li>
-            <li>Visores</li>
-            <li>Luces auxiliares</li>
-          </ul>
-          
-          <input class="Lista_Input_Accesorios" type="checkbox" id="Menu_Almacenamiento">
-          <label class="La_Menu_Accesorios" for="Menu_Almacenamiento">Almacenamiento</label>
-          <ul id="Almacenamiento" class="Lista_Accesorios">
-            <li>Baules</li>
-            <li>Mochilas</li>
-            <li>Alforjas</li>
-          </ul>
-            
-          <input class="Lista_Input_Accesorios" type="checkbox" id="Menu_Tecnologia">
-          <label class="La_Menu_Accesorios" for="Menu_Tecnologia">Tecnologia</label>
-          <ul id="Tecnologia" class="Lista_Accesorios">
-            <li>GPS</li>
-            <li>Camaras</li>
-            <li>Soportes para moviles</li>
-          </ul>
 
-          <input class="Lista_Input_Accesorios" type="checkbox" id="Menu_Seguridad">
-          <label class="La_Menu_Accesorios" for="Menu_Seguridad">Seguridad</label>
-          <ul id="Seguridad" class="Lista_Accesorios">
-            <li>Candados y Cadenas</li>
-            <li>Alarmas</li>
-            <li>Rastreadores</li>
-          </ul>
-            
-        </ul>
-      </div>
-
-      <div id="Right_Accesorios">
+    <main id="main_accesorios">
+      <div id="Productos_Accesorios">
         <div id="Info_Protecciones">
           <div id="Info_Cascos">
             <div class="Info_Flex">
-              <a href="https://www.cycles.com.ar/casco-integral-mac-speed-control/p">
+              <a href="https://www.cycles.com.ar/casco-integral-mac-speed-control/p" target="_blank">
                 <div id="Casco_Integral" >
-                  <img src="Casco1_Integral_Mac_Speed_Control.jpeg" alt="">
+                  <img class="img_productos_accesorios" src="Protecciones/Casco1_Integral_Mac_Speed_Control.jpeg" alt="">
                   <h3>Casco Integral Mac Speed Control</h3>
                   <p>$ 163.540,00</p>
                 </div>
               </a>
-              <a href="https://www.cycles.com.ar/casco-abierto-ls2-ff570-verso-mobile/p">
+              <a href="https://www.cycles.com.ar/casco-abierto-ls2-ff570-verso-mobile/p" target="_blank">
                 <div id="Casco_Abierto_LS2">
-                  <img src="Casco2_Abierto_LS2_FF570_Verso_Mobile.webp" alt="">
+                  <img class="img_productos_accesorios" src="Protecciones/Casco2_Abierto_LS2_FF570_Verso_Mobile.webp" alt="">
                   <h3>Casco Abierto LS2 FF570 Verso Mobile</h3>
                   <p>$ 320.752,00</p>
                 </div>
               </a>
-              <a href="https://www.cycles.com.ar/casco-rebatible-ls2-ff370-easy-solid/p">
+              <a href="https://www.cycles.com.ar/casco-rebatible-ls2-ff370-easy-solid/p" target="_blank">
                 <div>
-                  <img src="Casco3_Rebatible_LS2_FF370_Easy_Solid.webp" alt="">
+                  <img class="img_productos_accesorios" src="Protecciones/Casco3_Rebatible_LS2_FF370_Easy_Solid.webp" alt="">
                   <h3>Casco Rebatible LS2 FF370 Easy Solid</h3>
                   <p>$ 325.160,00</p>
                 </div>
               </a>
-              <a href="https://www.cycles.com.ar/casco-integral-caberg-drift-evo-integra-doble-visor-con-pinlock--/p">
+              <a href="https://www.cycles.com.ar/casco-integral-caberg-drift-evo-integra-doble-visor-con-pinlock--/p" target="_blank">
                 <div>
-                  <img src="Casco4_Integral_Caberg_Drift_Evo_Integra_Doble_Visor_con_Pinlock.jpeg" alt="">
+                  <img class="img_productos_accesorios" src="Protecciones/Casco4_Integral_Caberg_Drift_Evo_Integra_Doble_Visor_con_Pinlock.jpeg" alt="">
                   <h3>Casco Integral Caberg Drift Evo Integra Doble Visor</h3>
                   <p>$ 490.000,00</p>
                 </div>
@@ -114,105 +107,316 @@
             </div>
             
             <div class="Info_Flex">
-              <a href="https://www.cycles.com.ar/casco-integral-mac-speed-2-0-bond/p">
+              <a href="https://www.cycles.com.ar/casco-integral-mac-speed-2-0-bond/p" target="_blank">
                 <div>
-                  <img src="Casco5_Integral_Mac_Speed_2.0_Bond.jpeg" alt="">
+                  <img class="img_productos_accesorios" src="Protecciones/Casco5_Integral_Mac_Speed_2.0_Bond.jpeg" alt="">
                   <h3>Casco Integral Mac Speed 2.0 Bond</h3>
                   <p>$ 163.540,00</p>
                 </div>
               </a>
-              <a href="https://www.cycles.com.ar/casco-rebatible-ls2-ff900-valiant-ii-doble-visor/p">
+              <a href="https://www.cycles.com.ar/casco-rebatible-ls2-ff900-valiant-ii-doble-visor/p" target="_blank">
                 <div>
-                  <img src="Casco6_Rebatible_LS2_FF900_Valiant_II_Doble_Visor.webp" alt="">
+                  <img class="img_productos_accesorios" src="Protecciones/Casco6_Rebatible_LS2_FF900_Valiant_II_Doble_Visor.webp" alt="">
                   <h3>Casco Rebatible LS2 FF900 Valiant II Doble Visor</h3>
                   <p>$ 643.668,00</p>
                 </div>
               </a>
-              <a href="https://www.cycles.com.ar/casco-cross-ls2-473-fast-evo-strike/p">
+              <a href="https://www.cycles.com.ar/casco-cross-ls2-473-fast-evo-strike/p" target="_blank">
                 <div>
-                  <img src="Casco7_Cross_LS2_473_Fast_Evo_Strike.webp" alt="">
+                  <img class="img_productos_accesorios" src="Protecciones/Casco7_Cross_LS2_473_Fast_Evo_Strike.webp" alt="">
                   <h3>Casco Cross LS2 473 Fast Evo Strike</h3>
                   <p>$ 242.403,00</p>
                 </div>
               </a>
-              <a href="https://www.cycles.com.ar/casco-cross-mac-virtus-sharp/p">
+              <a href="https://www.cycles.com.ar/casco-cross-mac-virtus-sharp/p" target="_blank">
                 <div>
-                  <img src="Casco8_Cross_Mac_Virtus_Sharp.webp" alt="">
+                  <img class="img_productos_accesorios" src="Protecciones/Casco8_Cross_Mac_Virtus_Sharp.webp" alt="">
                   <h3>Casco Cross Mac Virtus Sharp</h3>
                   <p>$ 195.408,00</p>
                 </div>
               </a>
             </div>
-          </div>
-
+          </div><br>
+          
           <div id="Info_Guantes">
             <div class="Info_Flex">
-              <a href="https://www.cycles.com.ar/guantes-media-estacion-cross-hawk-fit-camel-tactiles/p">
+              <a href="https://www.cycles.com.ar/guantes-media-estacion-cross-hawk-fit-camel-tactiles/p" target="_blank">
                 <div>
-                  <img src="Guantes1_Media_Estacion_Cross_Hawk_Fit_Camel_Tactiles.webp" alt="">
+                  <img class="img_productos_accesorios" src="Protecciones/Guantes1_Media_Estacion_Cross_Hawk_Fit_Camel_Tactiles.webp" alt="">
                   <h3>Guantes Media Estacion Cross Hawk Fit Camel Tactiles</h3>
                   <p>$ 40.158,62</p>
                 </div>
               </a>
-              <a href="https://www.cycles.com.ar/guantes-con-protecciones-hawk-army-camel-full-finger-tactiles/p">
+              <a href="https://www.cycles.com.ar/guantes-con-protecciones-hawk-army-camel-full-finger-tactiles/p" target="_blank">
                 <div>
-                  <img src="Guantes2_con_Protecciones_Hawk_Army_Camel_Full_Finger_Tactiles.webp" alt="">
+                  <img class="img_productos_accesorios" src="Protecciones/Guantes2_con_Protecciones_Hawk_Army_Camel_Full_Finger_Tactiles.webp" alt="">
                   <h3>Guantes con Protecciones Hawk Army Camel Full Finger Tactiles</h3>
                   <p>$ 43.638,05</p>
                 </div>
               </a>
-              <a href="https://www.cycles.com.ar/guantes-con-protecciones-nine-to-one-urban-evo/p">
+              <a href="https://www.cycles.com.ar/guantes-con-protecciones-nine-to-one-urban-evo/p" target="_blank">
                 <div>
-                  <img src="Guantes3_con_Protecciones_Nine_To_One_Urban_Evo.webp" alt="">
+                  <img class="img_productos_accesorios" src="Protecciones/Guantes3_con_Protecciones_Nine_To_One_Urban_Evo.webp" alt="">
                   <h3>Guantes con Protecciones Nine To One Urban Evo</h3>
                   <p>$ 63.609,00</p>
                 </div>
               </a>
-              <a href="https://www.cycles.com.ar/guantes-fourstroke-speed/p">
+              <a href="https://www.cycles.com.ar/guantes-fourstroke-speed/p" target="_blank">
                 <div>
-                  <img src="Guantes4_Fourstroke_Speed.jpeg" alt="">
+                  <img class="img_productos_accesorios" src="Protecciones/Guantes4_Fourstroke_Speed.jpeg" alt="">
                   <h3>Guantes Fourstroke Speed</h3>
                   <p>$ 62.417,00</p>
                 </div>
               </a>
             </div>
             <div class="Info_Flex">  
-              <a href="https://www.cycles.com.ar/guantes-con-protecciones-hawk-army-camel-full-finger-tactiles/p">
+              <a href="https://www.cycles.com.ar/guantes-fourstroke-start/p" target="_blank">
                 <div>
-                  <img src="Guantes5_SOBRE_GUANTES_TUCANO_URBANO_GORDON.webp" alt="">
-                  <h3>Guantes con Protecciones Hawk Army Camel Full Finger Tactiles</h3>
-                  <p>$ 43.638,05</p>
+                  <img class="img_productos_accesorios" src="Protecciones/Guantes5_Fourstroke_Start.jpg" alt="">
+                  <h3>Guantes Fourstroke Start</h3>
+                  <p>$ 72.748,00</p>
                 </div>
               </a>
-              <a href="https://www.cycles.com.ar/guantes-con-protecciones-hawk-army-camel-full-finger-tactiles/p">
+              <a href="https://www.cycles.com.ar/guantes-nine-to-one-atomic/p" target="_blank">
                 <div>
-                  <img src="Guantes2_con_Protecciones_Hawk_Army_Camel_Full_Finger_Tactiles.webp" alt="">
-                  <h3>Guantes con Protecciones Hawk Army Camel Full Finger Tactiles</h3>
-                  <p>$ 43.638,05</p>
+                  <img class="img_productos_accesorios" src="Protecciones/Guantes6_Nine_To_One_Atomic.webp" alt="">
+                  <h3>Guantes Nine To One Atomic</h3>
+                  <p>$ 53.970,00</p>
                 </div>
               </a>
-              <a href="https://www.cycles.com.ar/guantes-con-protecciones-hawk-army-camel-full-finger-tactiles/p">
+              <a href="https://www.cycles.com.ar/guantes-cortos-nine-to-one-armour-cuero/p" target="_blank">
                 <div>
-                  <img src="Guantes2_con_Protecciones_Hawk_Army_Camel_Full_Finger_Tactiles.webp" alt="">
-                  <h3>Guantes con Protecciones Hawk Army Camel Full Finger Tactiles</h3>
-                  <p>$ 43.638,05</p>
+                  <img class="img_productos_accesorios" src="Protecciones/Guantes7_Cortos_Nine_To_One_Armour_Cuero.webp" alt="">
+                  <h3>Guantes Cortos Nine To One Armour Cuero</h3>
+                  <p>$ 118.140,00</p>
                 </div>
               </a>
-              <a href="https://www.cycles.com.ar/guantes-con-protecciones-hawk-army-camel-full-finger-tactiles/p">
+              <a href="https://www.cycles.com.ar/guantes-ls2-ray-man/p" target="_blank" >
                 <div>
-                  <img src="Guantes2_con_Protecciones_Hawk_Army_Camel_Full_Finger_Tactiles.webp" alt="">
-                  <h3>Guantes con Protecciones Hawk Army Camel Full Finger Tactiles</h3>
-                  <p>$ 43.638,05</p>
+                  <img class="img_productos_accesorios" src="Protecciones/Guantes8_LS2_Ray_Man.webp" alt="">
+                  <h3>Guantes LS2 Ray Man</h3>
+                  <p>Guantes LS2 Ray Man</p>
                 </div>
               </a>
             </div>
-            
+          </div>
+        </div><br>
+        
+
+        <div id="Info_visibilidad">
+          <div id="Info_Antiparras">
+            <div class="Info_Flex">
+              <a href="https://peumamotos.com.ar/productos/antiparras-100--strata-2-forecast-goggle-black-clear-lens/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/Antiparras1_STRATA_2_FORECAST_Goggle_Black _Clear_Lens.webp" alt="">
+                  <h3>Antiparras 100 % - STRATA 2 FORECAST Goggle Black - Clear Lens</h3>
+                  <p>$125.000,00</p>
+                </div>
+              </a>
+
+              <a href="https://peumamotos.com.ar/productos/antiparras-100--strata-2-sand-goggle-kombat-smoke-lens/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/Antiparras2_STRATA_2_SAND_Goggle_Kombat _Smoke_Lens.webp" alt="">
+                  <h3>Antiparras 100 % - STRATA 2 SAND Goggle Kombat - Smoke Lens</h3>
+                  <p>$65.000,00</p>
+                </div>
+              </a>
+              <a href="https://peumamotos.com.ar/productos/antiparras-100--strata-2-navy-mirror-red-lens/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/Antiparras3_STRATA_2_Navy_Mirror_Red_Lens.webp" alt="">
+                  <h3>Antiparras 100 % - STRATA 2 Navy - Mirror Red Lens</h3>
+                  <p>$65.000,00</p>
+                </div>
+              </a>
+              <a href="https://peumamotos.com.ar/productos/antiparras-100--strata-2-forecast-goggle-black-clear-lens/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/Antiparras4_STRATA_2_Pink_Mirror_Red_Lens.webp" alt="">
+                  <h3>Antiparras 100 % - STRATA 2 Pink - Mirror Red Lens</h3>
+                  <p>$65.000,00</p>
+                </div>
+              </a>  
+            </div>
+            <div class="Info_Flex">
+              <a href="https://peumamotos.com.ar/productos/antiparras-100--strata-2-black-mirror-silver-lens/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/Antiparras5_STRATA_2_Black_Mirror_Silver_Lens.webp" alt="">
+                  <h3>Antiparras 100 % - STRATA 2 Black - Mirror Silver Lens</h3>
+                  <p>$65.000,00</p>
+                </div>
+              </a>
+              <a href="https://peumamotos.com.ar/productos/antiparras-100--strata-2-solar-eclipse-mirror-true-gold-lens/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/Antiparras6_STRATA_2_Solar_Eclipse_Mirror_True_Gold_Lens.webp" alt="">
+                  <h3>Antiparras 100 % - STRATA 2 Solar Eclipse - Mirror True Gold Lens</h3>
+                  <p>$65.000,00</p>
+                </div>
+              </a>
+              <a href="https://peumamotos.com.ar/productos/antiparras-100--strata-2-stone-mirror-blue-lens/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/Antiparras7_STRATA_2_Stone_Mirror_Blue_Lens.webp" alt="">
+                  <h3>Antiparras 100 % - STRATA 2 Stone - Mirror Blue Lens</h3>
+                  <p>$65.000,00</p>
+                </div>
+              </a>
+              <a href="https://peumamotos.com.ar/productos/antiparras-100--strata-2-war-camo-mirror-silver-lens/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/Antiparras8_STRATA_2_War_Camo_Mirror_Silver_Lens.webp" alt="">
+                  <h3>Antiparras 100 % - STRATA 2 War Camo - Mirror Silver Lens</h3>
+                  <p>$65.000,00</p>
+                </div>
+              </a>
+            </div>
+
+          </div><br>
+          
+
+          <div id="Info_Visores">
+            <div class="Info_Flex">
+              <a href="https://peumamotos.com.ar/productos/visor-dark-mt-v-28b-max-vision/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/VISOR1_DARK_MT_V_28B_MAX_VISION.png" alt="">
+                  <h3>VISOR DARK MT-V-28B MAX VISION</h3>
+                  <p>$58.000,00</p>
+                </div>
+              </a>
+              <a href="https://peumamotos.com.ar/productos/visor-iridium-blue-mt-v-28b-max-vision/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/VISOR2_IRIDIUM_BLUE_MT_V_28B_MAX_VISION.png" alt="">
+                  <h3>VISOR IRIDIUM BLUE MT-V-28B MAX VISION</h3>
+                  <p>$62.000,00</p>
+                </div>
+              </a>
+              <a href="https://peumamotos.com.ar/productos/visor-revo-rojo-mt-v-28b-max-vision/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/VISOR3_REVO_ROJO_MT_V_28B_MAX_VISION.png" alt="">
+                  <h3>VISOR REVO ROJO MT-V-28B MAX VISION</h3>
+                  <p>$62.000,00</p>
+                </div>
+              </a>
+              <a href="https://peumamotos.com.ar/productos/visor-axxis-v-31b-max-vision-azul/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/VISOR4_AXXIS_V_31B_MAX_VISION_AZUL.png" alt="">
+                  <h3>VISOR AXXIS V-31B MAX VISION AZUL</h3>
+                  <p>$45.000,00</p>
+                </div>
+              </a>
+            </div>
+            <div class="Info_Flex">
+              <a href="https://peumamotos.com.ar/productos/visor-revo-azul-mt-v-28b-max-vision/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/VISOR5_REVO_AZUL_MT_V_28B_MAX_VISION.png" alt="">
+                  <h3>VISOR REVO AZUL MT-V-28B MAX VISION</h3>
+                  <p>$62.000,00</p>
+                </div>
+              </a>
+              <a href="https://peumamotos.com.ar/productos/visor-iridium-mt-v-28b-max-vision-azul/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/VISOR6_IRIDIUM_MT_V_28B_MAX_VISION_AZUL.png" alt="">
+                  <h3>VISOR IRIDIUM MT V-28B MAX VISION AZUL</h3>
+                  <p>$52.000,00</p>
+                </div>
+              </a>
+              <a href="https://peumamotos.com.ar/productos/visor-axxis-v-31-espejado-max-vision/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/VISOR7_AXXIS_V_31_ESPEJADO_MAX_VISION.webp" alt="">
+                  <h3>VISOR AXXIS V-31 ESPEJADO MAX VISION</h3>
+                  <p>$42.000,00</p>
+                </div>
+              </a>
+              <a href="https://peumamotos.com.ar/productos/visor-axxis-v-31-azul-max-vision/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Visibilidad/VISOR8_AXXIS_V_31_AZUL_MAX_VISION.webp" alt="">
+                  <h3>VISOR AXXIS V-31 AZUL MAX VISION</h3>
+                  <p>$48.000,00</p>
+                </div>
+              </a>
+
+            </div>
 
           </div>
+
+        </div><br>
+        
+
+        <div id="Info_Almacenamiento">
+          <div id="Info_Baules">
+            <div class="Info_Flex">
+              <a href="https://peumamotos.com.ar/productos/baul-top-case-agvsport-by-shad-sh-44-litros/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Almacenamiento/Baul1_Top_Case_Agvsport_By_Shad_SH_44_Litros.webp" alt="">
+                  <h3>Baul Top Case Agvsport By Shad SH 44 Litros</h3>
+                  <p>$190.000,00</p>
+                </div>
+              </a>
+              <a href="https://peumamotos.com.ar/productos/baul-top-case-agvsport-by-shad-sh33-litros/" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Almacenamiento/Baul2_Top_Case_Agvsport_By_Shad_Sh33_Litros.webp" alt="">
+                  <h3>Baul Top Case Agvsport By Shad Sh33 Litros</h3>
+                  <p>$125.000,00</p>
+                </div>
+              </a>
+              <a href="https://www.cycles.com.ar/baul-porta-objetos-big-48-reflectivo-cristal-plastica-vc/p" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Almacenamiento/Baul3_Porta_Objetos_Big_48_Reflectivo_Cristal_Plastica_VC.webp" alt="">
+                  <h3>Baul Porta Objetos Big 48 Reflectivo Cristal Plastica VC</h3>
+                  <p>$89.728,15</p>
+                </div>
+              </a>
+              <a href="https://www.cycles.com.ar/baul-mac-46-litros/p" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Almacenamiento/Baul4_Mac_46_Litros.webp" alt="">
+                  <h3>Baul Mac 46 Litros</h3>
+                  <p>$150.980,00</p>
+                </div>
+              </a>
+
+
+            </div>
+
+
+          </div>
+        </div><br>
+        
+
+        <div id="Info_Tecnologia">
+          <div id="Info_GPS">
+            <div class="Info_Flex">
+              <a href="https://www.mercadolibre.com.ar/gps-tracker-localizador-rastreador-electronic-gt01-auto-moto-el-mejor/p/MLA25277267#polycard_client=search-nordic&search_layout=stack&position=1&type=product&tracking_id=74204fc9-d9f0-490e-bfbf-128b850ac3dd&wid=MLA1618213030&sid=search" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Tecnologia/Gps1_Tracker_Localizador_Rastreador_Electronic_Gt01.webp" alt="">
+                  <h3>Gps Tracker Localizador Rastreador Electronic Gt01</h3>
+                  <p>$47.199,00</p>
+                </div>
+              </a>
+              <a href="https://www.mercadolibre.com.ar/gps-tracker-localizador-rastreador-satelital-auto-moto-app-altanet/p/MLA38803141#polycard_client=search-nordic&search_layout=stack&position=6&type=product&tracking_id=3236662e-9ef5-4d43-adce-e15872bb6a25&wid=MLA1520654505&sid=searchs" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Tecnologia/Gps2_Tracker_Localizador_Rastreador_Satelital.webp" alt="">
+                  <h3>Gps Tracker Localizador Rastreador Satelital</h3>
+                  <p>$52.999,99</p>
+                </div>
+              </a>
+              <a href="https://articulo.mercadolibre.com.ar/MLA-1673069738-tracker-gps-rastreador-localizador-4g-alarma-audio-cy06-_JM#polycard_client=search-nordic&search_layout=stack&position=2&type=item&tracking_id=ff7e3713-0749-434c-a89b-e87b3ba2809a&wid=MLA1673069738&sid=search" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Tecnologia/Gps3_Tracker_Rastreador_Localizador_4g_Alarma_Audio_Cy06.webp" alt="">
+                  <h3>Gps Tracker Localizador Rastreador 4G + Alarma + Audio Cy06</h3>
+                  <p>$75.999,00</p>
+                </div>
+              </a>
+              <a href="https://www.mercadolibre.com.ar/gps-tracker-localizador-vehiculo-auto-moto-camion-rastreador/p/MLA44838549#polycard_client=search-nordic&search_layout=stack&position=17&type=product&tracking_id=977407ab-ef8e-4939-a463-15f030114db0&wid=MLA2005445526&sid=search" target="_blank">
+                <div>
+                  <img class="img_productos_accesorios" src="Tecnologia/Gps4_Tracker_Localizador_Vehiculo_Auto_Moto_Rastreador.webp" alt="">
+                  <h3>Gps Tracker Localizador Vehiculo Auto Moto Rastreador</h3>
+                  <p>$54.990,00</p>
+                </div>
+              </a>
+            </div>
+
+          </div>
+            <video src="Video_fondo.mp4" autoplay muted loop></video>
         </div>
       </div>
-      
-    </div>
+    </main>
+    <!-- Lista de accesorios -->
 
     <!-- Footer -->
     <footer>
