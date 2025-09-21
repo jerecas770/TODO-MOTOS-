@@ -422,8 +422,9 @@ body {
 }
 
 
-#Body_Accesorios{
+#Body_Accesorios {
   padding: 0;
+  margin: 0;
 }
 
 #Video_body_Accesorio{
@@ -446,19 +447,59 @@ body {
 
 
 #Div_Encabezado {
-  top: 0;
   background-color: #16F20F;
-  padding: 10px;
   display: flex;
   justify-content: space-between;
   width: 100%;
   position: fixed;
+  text-decoration: none;
+  font-family: Memsmark;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
 
-#H1_Accesorios {
-  color: #000000;
-  text-align: left;
+#Div_H1_Accesorios {
+  display: flex;
+  margin: 0 5px;
+  padding-top: 0;
 }
+
+#H1_Accesorios{
+  color: hsl(0, 0%, 0%);
+  padding-top: 20px;
+  text-align: left;
+  align-items: center;
+  font-family: Broken;
+  letter-spacing: 2px;
+}
+
+#dibujito_accesorios {
+  text-decoration: none;
+  font-family: BlackHunter;
+  color: #000;
+  font-size: 50px;
+  top: 0;
+  text-align: center;
+}
+
+
+@font-face { 
+    font-family: BlackHunter; /* nombre de la tipografia*/
+    src: url(accesorios/fuentes_accesorios/Blackhunter.ttf) format(truetype); /*Busco la ubicación de la tipografia (fonts)*/
+}
+
+@font-face { 
+    font-family: Memsmark; /* nombre de la tipografia*/
+    src: url(accesorios/fuentes_accesorios/Memsmark.ttf) format(truetype); /*Busco la ubicación de la tipografia (fonts)*/
+}
+
+@font-face { 
+    font-family: Broken; /* nombre de la tipografia*/
+    src: url(accesorios/fuentes_accesorios/BrokenUp.ttf) format(truetype); /*Busco la ubicación de la tipografia (fonts)*/
+}
+
+
+
 
 #Div_Encabezado #Ul_Menu_Accesorios {
   display: flex;
@@ -466,7 +507,11 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
+
+/*defino mi tipografia descargada*/
+/*son declaraciones especiales que se usan para definir estilos avanzados. por ejemplo, @font-face es una regla que permite importar y definir fuentes personalizadas. estas reglas suelen comenzar con el símbolo @*/
 
 
 
@@ -489,7 +534,6 @@ body {
   padding: 0;
   border-radius: 5px;
   bottom: 0;
-  transition: background-color 0.3s ease;
 }
 
 .Li_Menu_Accesorios:hover{
@@ -497,21 +541,21 @@ body {
   transition: 0.3s;
 }
 
-.Li_Menu_Accesorios .Inicio_Sesion_Accesorios{
+.Li_Menu_Accesorios  , .Li_Menu_Accesorios a{
   display: block;
   text-decoration: none;
   padding: 0;
   color: #000;
-  width:120px;
+  width:auto;
   height: 40px;
-  margin: 0;
+  margin-right: 5px;
   text-align: center;
   
 }
 
 
 
-/* Contenedor del submenú (oculto por defecto) */
+/* Contenedor del submenú */
 .div_submenu_accesorios {
   display: none;
   position: absolute;
@@ -539,7 +583,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Hover en los enlaces del submenú */
+/* enlaces del submenú */
 .div_submenu_accesorios a:hover {
   background-color: #14c5fb;
 }
@@ -550,7 +594,24 @@ body {
   justify-content: center; /* Centra el bloque de productos */
   padding: 0;
   margin: 0;
+  
 }
+
+#main_accesorios h3  {
+  text-decoration: none;
+  font-family: Memsmark;
+  font-weight: 100;
+  letter-spacing: 1px;
+  padding: 0;
+}
+
+#main_accesorios p {
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+
 
 .Info_Flex {
   display: flex;
@@ -583,6 +644,37 @@ body {
   height: 200px;
 }
 
+/*--------------- Formulario de accesorios ------------- */
+#Body_Formulario_Accesorios {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #000;
+    background: radial-gradient(circle, #271ff7, #04b0ce);
+    
+}
+#Form_Accesorios {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+}
+.Input_Form_Accesorios {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+#Submit_Form_Accesorios {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#Submit_Form_Accesorios:hover {
+    background-color: #45a049;
+}
 
 
 
