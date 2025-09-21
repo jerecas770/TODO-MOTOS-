@@ -417,72 +417,58 @@ body {
 /*-----------------------------Accesorios------------------------------*/
 
 #HTML_Accesorios{
-  /*scroll-behavior: smooth;*/
   scroll-padding-top: 80px; /* Ajuste para evitar que la información quede detrás del encabezado */
 }
 
-
 #Body_Accesorios {
-  padding: 0;
+  padding: 0; /*Elimino el padding y el margin del body*/
   margin: 0;
 }
 
 #Video_body_Accesorio{
-  width: 100%;
+  width: 100%;  /*Que el video ocupe el 100% de la pantalla*/
   height: 100%;
-  position: fixed;
-  margin-top: 0;
-  top: 0;
-  left: 0;
-  z-index: -2;
-  object-fit: cover;
+  position: fixed; /*Para que el video quede fijo*/
+  z-index: -2; /*Para que el video quede detrás de todo */
+  object-fit: cover; /*Para que el video ocupe todo el espacio sin deformarse*/
 }
 
 #header_accesorios{
-  height: 150px;
-  padding-top: 90px;
+  padding-top: 90px; /*Para que el menu no quede debajo del encabezado*/
 }
-
-
-
 
 #Div_Encabezado {
   background-color: #16F20F;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  position: fixed;
-  text-decoration: none;
-  font-family: Memsmark;
-  font-weight: 100;
-  letter-spacing: 1px;
+  display: flex; /*Para que los elementos hijos se alineen en fila */
+  justify-content: space-between; /*Para el titulo quede a la izquierda y los li a la derecha*/
+  width: 100%; /*Para que el encabezado ocupe todo el ancho de la pantalla*/
+  position: fixed; /*Para que el encabezado quede fijo*/
+  text-decoration: none; /*Para que no tenga subrayado*/
+  font-family: Memsmark; /*Defino la tipografia*/
+  font-weight: 100; /*Defino el grosor de la tipografia*/
+  letter-spacing: 1px; /*Defino el espacio entre letras*/
 }
 
 #Div_H1_Accesorios {
-  display: flex;
-  margin: 0 5px;
-  padding-top: 0;
+  display: flex; /*Para que el titulo y el dibujito queden en fila*/
+  margin: 0 5px; /*Para que el titulo no quede pegado al borde y al dibujitos*/
 }
 
 #H1_Accesorios{
-  color: hsl(0, 0%, 0%);
-  padding-top: 20px;
-  text-align: left;
-  align-items: center;
-  font-family: Broken;
-  letter-spacing: 2px;
+  color: #000;
+  padding-top: 20px; /*Para que el titulo no quede pegado al borde superior y quede alineado con el dibujito*/
+  text-align: left; /*Para que el titulo quede alineado a la izquierda*/
+  font-family: Broken; /*Defino la tipografia*/
+  letter-spacing: 2px; /*Defino el espacio entre letras*/
 }
 
 #dibujito_accesorios {
-  text-decoration: none;
-  font-family: BlackHunter;
+  font-family: BlackHunter; /*Defino la tipografia*/
   color: #000;
-  font-size: 50px;
-  top: 0;
-  text-align: center;
+  font-size: 50px; /*Defino el tamaño de la tipografia*/
 }
 
-
+/*son declaraciones especiales que se usan para definir estilos avanzados. por ejemplo, @font-face es una regla que permite importar y definir fuentes personalizadas. estas reglas suelen comenzar con el símbolo @*/
 @font-face { 
     font-family: BlackHunter; /* nombre de la tipografia*/
     src: url(accesorios/fuentes_accesorios/Blackhunter.ttf) format(truetype); /*Busco la ubicación de la tipografia (fonts)*/
@@ -498,100 +484,91 @@ body {
     src: url(accesorios/fuentes_accesorios/BrokenUp.ttf) format(truetype); /*Busco la ubicación de la tipografia (fonts)*/
 }
 
-
-
-
 #Div_Encabezado #Ul_Menu_Accesorios {
-  display: flex;
+  display: flex; /*Para que los li queden en fila*/
   justify-content: flex-end; /* Esto alinea los li a la derecha */
-  list-style: none;
+  list-style: none; /*Para que no tenga el punto*/
   margin: 0;
   padding: 0;
-  align-items: center;
+  align-items: center; /*Para que los li queden alineados verticalmente*/
 }
-
-/*defino mi tipografia descargada*/
-/*son declaraciones especiales que se usan para definir estilos avanzados. por ejemplo, @font-face es una regla que permite importar y definir fuentes personalizadas. estas reglas suelen comenzar con el símbolo @*/
-
-
 
 /* se muestra el submenú cuando el mouse está sobre el li principal */
 .Li_Menu_Accesorios:hover .div_submenu_accesorios {
-  display: block;
+  display: block; /* Mostrar el submenú */
   margin: 0;
   padding: 0;
   
 }
 
-
 /* Estilo del ítem principal del menú */
 .Li_Menu_Accesorios {
-  text-decoration: none;
-  margin: 5px 5px;
+  text-decoration: none; /*Para que no tenga subrayado*/
+  margin: 5px 5px; /*Para que no quede pegado al borde y a los otros li*/
   position: relative; /* posición relativa para que quede debajo del menú */
   cursor: pointer; /* para que cambie el cursor al pasar por encima*/
   color: #000;
   padding: 0;
-  border-radius: 5px;
+  border-radius: 5px; /* Bordes redondeados */
 }
 
 .Li_Menu_Accesorios:hover{
-  background-color: #14c5fb;
-  transition: 0.3s;
+  background-color: #04b0ce; /* Color de fondo al pasar el mouse */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: 0.3s; /* el tiempo que se toma en cambiar de color */
 }
 
 .Li_Menu_Accesorios  , .Li_Menu_Accesorios a{
-  display: block;
-  text-decoration: none;
+  display: block; /* Para que el área clickeable ocupe todo el li */
+  text-decoration: none; /*Para que no tenga subrayado*/
   padding: 0;
   color: #000;
-  width:auto;
-  height: 40px;
-  margin-right: 5px;
-  text-align: center;
+  width:auto; /* Para que el ancho se ajuste al contenido */
+  height: 40px; /* Altura fija para todos los ítems */
+  margin-right: 5px; /* Espacio entre los ítems */
+  text-align: center; /* Centrar el texto */
   
 }
 
-
-
 /* Contenedor del submenú */
 .div_submenu_accesorios {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  z-index: 100;
-  min-width: 180px;
-  padding: 0;
-  margin: 0;
-  border-radius: 5px;
+  display: none; /* Oculto por defecto */
+  position: absolute; /* posición absoluta para que quede debajo del menú */
+  top: 100%; /* justo debajo del li principal */
+  left: 0; /* Alineado a la izquierda del li principal */
+  background-color: #fff; /* Color de fondo del submenú */
+  z-index: 100; /* Asegura que el submenú esté por encima de otros elementos */
+  padding: 0; /* Espaciado interno */
+  margin: 0; /* Espaciado externo */
+  border-radius: 5px; /* Bordes redondeados */
+  width: 160px; /* Ancho fijo para el submenú */
 }
 
 
 /* Mostrar el submenú al pasar el mouse */
 .Li_Menu_Accesorios:hover .div_submenu_accesorios {
-  display: block;
+  display: block; /* Mostrar el submenú */
 }
 
 /* Estilo de los enlaces dentro del submenú */
 .div_submenu_accesorios a {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
+  display: block; /* Para que el área clickeable ocupe todo el ancho */
+  padding: 10px 15px; /* Espaciado interno */
+  text-decoration: none; /* Para que no tenga subrayado */
   color: #000;
-  transition: background-color 0.3s ease;
+  transition: 0.3s; /* transición suave para el hover */
   margin: 0;
 }
 
 /* enlaces del submenú */
 .div_submenu_accesorios a:hover {
   background-color: #14c5fb;
+  border-radius: 5px; /* Bordes redondeados */
 }
 
 #main_accesorios {
-  width: 100%;
-  display: flex;
+  width: 100%; /*Para que el bloque de productos ocupe todo el ancho de la pantalla*/
+  display: flex; /*Para que los productos queden en fila*/
   justify-content: center; /* Centra el bloque de productos */
   padding: 0;
   margin: 0;
@@ -599,77 +576,73 @@ body {
 }
 
 #main_accesorios h3  {
-  text-decoration: none;
-  font-family: Memsmark;
-  font-weight: 100;
-  letter-spacing: 1px;
+  text-decoration: none; /*Para que no tenga subrayado*/
+  font-family: Memsmark; /*Defino la tipografia*/
+  font-weight: 100; /*Defino el grosor de la tipografia*/
+  letter-spacing: 1px; /*Defino el espacio entre letras*/
   padding: 0;
 }
 
 #main_accesorios p {
-  font-weight: 600;
-  padding: 0;
+  font-weight: 600; /*Defino el grosor de la tipografia*/
+  padding: 0; 
   margin: 0;
 }
 
 
 
 .Info_Flex {
-  display: flex;
-  justify-content: center; /* Centra los productos dentro del bloque */
+  display: flex; /*Para que los productos queden en fila*/
   gap: 20px; /*separa cada producto*/
 }
 
 
 .Info_Flex a{
-  text-decoration: none;
+  text-decoration: none; /*Para que no tenga subrayado*/
   color: #000;
-  width: 280px;
-  height: 320px;
-  border-collapse: collapse;
-  border: #000 1px solid;
+  width: 280px; /* Ancho fijo para los productos */
+  height: 320px; /* Alto fijo para los productos */
+  border: #000 1px solid; /* Bordes de los productos */
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 15px; /* Bordes redondeados */
 }
 
 .Info_Flex a:hover{
   background-color: #16F20F;
-  transition: 0.3s;
+  transition: 0.3s; /* el tiempo que se toma en cambiar de color */
 }
 
 .img_productos_accesorios{
-  width: 200px;
-  height: 200px;
+  width: 200px; /* Ancho fijo para las imágenes */
+  height: 200px; /* Alto fijo para las imágenes */
 }
 
 #div_tabla_accesorios {
-  display: flex;
+  display: flex; /*Para que la tabla quede en fila*/
   justify-content: center; /* Centra la tabla */
-  padding: 20px 0;
-  margin: 0;
+  padding: 20px 0; /* Espaciado arriba y abajo de la tabla */
+  margin: 0; /* Elimino el margin */
 }
 
 #tabla_accesorios {
-  width: 90%;
+  width: 90%; /*Para que la tabla ocupe el 90% del ancho de la pantalla*/
   margin: 0;
 }
 
 #tabla_accesorios th{
   background-color: #16F20F;
-  border-collapse: collapse;
+  border-collapse: collapse; /*Para que no haya espacio entre las celdas*/
 }
 
 #tabla_accesorios th, #tabla_accesorios td {
-  color: #000;
-  border: 1px solid #000;
-  padding: 8px;
-  text-align: left;
+  color: #000; /* Color del texto */
+  border: 1px solid #000; /* Bordes de las celdas */
+  padding: 8px; /* Espaciado interno */
 }
 
 #th5_accesorios , #th4_accesorios,#th3_accesorios{
-  width: 140px;
-  background-color: #16F20F;
-  color: #000;
+  width: 140px; /* Ancho fijo para las columnas 3,4 y 5 */
+  color: #000; /* Color del texto */
 }
 
 
@@ -677,30 +650,28 @@ body {
 
 /*--------------- Formulario de accesorios ------------- */
 #Body_Formulario_Accesorios {
-    font-family: Arial, sans-serif;
     margin: 20px;
     color: #000;
-    background: radial-gradient(circle, #271ff7, #04b0ce);
+    background: radial-gradient(circle, #271ff7, #04b0ce); /* Degradado de azul a celeste */
     
 }
 #Form_Accesorios {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    margin: auto;
-    padding: 20px;
+    display: flex; /*Para que los elementos del formulario queden en columna*/
+    flex-direction: column; /*Para que los elementos del formulario queden en columna*/
+    width: 400px; /*Ancho fijo para el formulario*/
+    margin: auto; /*Para que el formulario quede centrado*/
 }
 .Input_Form_Accesorios {
-    margin-bottom: 10px;
-    padding: 8px;
-    font-size: 14px;
+    margin-bottom: 10px; /*Espacio entre los elementos del formulario*/
+    padding: 8px; /*Espacio interno*/
+    font-size: 14px; /*Tamaño de la letra*/
   }
 
 #Submit_Form_Accesorios {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; /*Para que el submit no tenga bordes*/
+    cursor: pointer; /*Para que el cursor cambie al pasar por encima*/
 }
 
 #Submit_Form_Accesorios:hover {
