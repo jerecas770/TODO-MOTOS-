@@ -1,0 +1,761 @@
+/*inicio de pagina*/
+
+/* --- INTRO --- */
+body {
+  padding: 0;
+  overflow-x: hidden;
+  margin: 0;
+  background-color: #ffffff;
+  /* quitamos height, display:flex y overflow */
+}
+
+
+.logo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  width: 250px;
+  opacity: 0;
+  animation: slideZoomExit 4s ease forwards;
+}
+
+@keyframes slideZoomExit {
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw) scale(0.5);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(0) scale(1.1);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100vw) scale(0.8);
+  }
+}
+
+/* Contenido principal oculto al inicio */
+.content {
+  opacity: 0;
+  animation: showContent 1s ease forwards;
+  animation-delay: 4s; /* aparece después de que el logo se va */
+  text-align: center;
+  color: #000000;
+}
+
+@keyframes showContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- HEADER (MENÚ) --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #09ff00;
+  padding: 10px 20px;
+}
+
+header .logo-header img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* --- MAIN --- */
+main {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #16F20F;
+  text-align: center; /* centra los botones en el footer */
+  padding: 20px 10px;
+  margin-top: 40px;
+}
+
+.social-buttons {
+  /* para asegurarnos que los botones estén en línea y centrados */
+  display: inline-block; /* o flex con justify-content */
+}
+
+.social-btn {
+  display: inline-flex; /* para alinear icono dentro */
+  width: 50px;
+  height: 50px;
+  margin: 0 10px; /* espacio horizontal entre botones */
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #000000;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+/*hasta aca*/
+
+/*--------------------------------------------------------/*
+
+/*datos de pagina*/
+
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Sección del video (el contenedor) */
+.seccion-video {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+/* Estilo SOLO para el video dentro de la sección */
+.seccion-video video {
+  width: 100%;
+  max-width: 1000px;  /* 🔹 Cambiá este valor (ej: 300px) para hacerlo más chico */
+  height: auto;      /* Mantiene proporción */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Sección extra debajo del video */
+.contenido-extra {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+
+/*-------*/
+
+.razones-gr86 {
+  background-color: #fff;
+  padding: 60px 20px;
+  color: #000;
+  text-align: center;
+}
+
+.razones-gr86 h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.contenedor-razones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.razon {
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: left;
+}
+
+.razon img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.razon h3 {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.razon p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/*video con data */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px;
+}
+
+/* Contenedor principal: video + texto */
+.video-texto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Video */
+.video-container {
+  flex: 1 1 400px;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Texto */
+.texto-container {
+  flex: 1 1 400px;
+}
+
+.texto-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.texto-container h2 {
+  font-size: 20px;
+  color: #16F20F;
+  margin-bottom: 15px;
+}
+
+.texto-container p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-texto {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .texto-container h1,
+  .texto-container h2 {
+    text-align: center;
+  }
+}
+
+
+/*lista*/
+
+
+/* Reset y estilo base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.encabezado {
+  text-align: center;
+  margin-top: 80px;   /* <-- separa del menú de arriba */
+  margin-bottom: 40px;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #000000;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.lista-marcas {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Encabezado */
+.lista-marcas h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Lista horizontal en filas */
+.lista-marcas ul {
+  display: flex;
+  flex-wrap: wrap;         /* Permite que los elementos bajen a la siguiente línea */
+  gap: 10px 20px;          /* Espaciado entre items: vertical y horizontal */
+  list-style-type: disc;   /* Viñetas */
+  padding-left: 20px;
+}
+
+.lista-marcas li {
+  font-size: 16px;
+  width: auto;
+  white-space: nowrap;     /* Evita que el nombre se corte en 2 líneas */
+}
+
+
+/*cuadro*/
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #ffffff;
+  padding: 40px 20px;
+}
+
+/* Estilo para encabezado */
+.encabezado {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Título principal */
+.encabezado h1 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* Subtítulo h2 */
+.encabezado h2 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Subtítulo h3 */
+.encabezado h3 {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+
+.encabezado {
+  background-color: #000000; /* Fondo claro */
+  color: #222;               /* Texto oscuro */
+  padding: 40px 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 1px;        /* Opcional: bordes redondeados */
+}
+
+
+
+/*-----------------------------Accesorios------------------------------*/
+
+#HTML_Accesorios{
+  scroll-padding-top: 80px; /* Ajuste para evitar que la información quede detrás del encabezado */
+}
+
+#Body_Accesorios {
+  padding: 0; /*Elimino el padding y el margin del body*/
+  margin: 0;
+}
+
+#Video_body_Accesorio{
+  width: 100%;  /*Que el video ocupe el 100% de la pantalla*/
+  height: 100%;
+  position: fixed; /*Para que el video quede fijo*/
+  z-index: -2; /*Para que el video quede detrás de todo */
+  object-fit: cover; /*Para que el video ocupe todo el espacio sin deformarse*/
+}
+
+#header_accesorios{
+  padding-top: 90px; /*Para que el menu no quede debajo del encabezado*/
+}
+
+#Div_Encabezado {
+  background-color: #16F20F;
+  display: flex; /*Para que los elementos hijos se alineen en fila */
+  justify-content: space-between; /*Para el titulo quede a la izquierda y los li a la derecha*/
+  width: 100%; /*Para que el encabezado ocupe todo el ancho de la pantalla*/
+  position: fixed; /*Para que el encabezado quede fijo*/
+  text-decoration: none; /*Para que no tenga subrayado*/
+  font-family: Memsmark; /*Defino la tipografia*/
+  font-weight: 100; /*Defino el grosor de la tipografia*/
+  letter-spacing: 1px; /*Defino el espacio entre letras*/
+}
+
+#Div_H1_Accesorios {
+  display: flex; /*Para que el titulo y el dibujito queden en fila*/
+  margin: 0 5px; /*Para que el titulo no quede pegado al borde y al dibujitos*/
+}
+
+#H1_Accesorios{
+  color: #000;
+  padding-top: 20px; /*Para que el titulo no quede pegado al borde superior y quede alineado con el dibujito*/
+  text-align: left; /*Para que el titulo quede alineado a la izquierda*/
+  font-family: Broken; /*Defino la tipografia*/
+  letter-spacing: 2px; /*Defino el espacio entre letras*/
+}
+
+#dibujito_accesorios {
+  font-family: BlackHunter; /*Defino la tipografia*/
+  color: #000;
+  font-size: 50px; /*Defino el tamaño de la tipografia*/
+}
+
+/*son declaraciones especiales que se usan para definir estilos avanzados. por ejemplo, @font-face es una regla que permite importar y definir fuentes personalizadas. estas reglas suelen comenzar con el símbolo @*/
+@font-face { 
+    font-family: BlackHunter; /* nombre de la tipografia*/
+    src: url(accesorios/fuentes_accesorios/Blackhunter.ttf) format(truetype); /*Busco la ubicación de la tipografia (fonts)*/
+}
+
+@font-face { 
+    font-family: Memsmark; /* nombre de la tipografia*/
+    src: url(accesorios/fuentes_accesorios/Memsmark.ttf) format(truetype); /*Busco la ubicación de la tipografia (fonts)*/
+}
+
+@font-face { 
+    font-family: Broken; /* nombre de la tipografia*/
+    src: url(accesorios/fuentes_accesorios/BrokenUp.ttf) format(truetype); /*Busco la ubicación de la tipografia (fonts)*/
+}
+
+#Div_Encabezado #Ul_Menu_Accesorios {
+  display: flex; /*Para que los li queden en fila*/
+  justify-content: flex-end; /* Esto alinea los li a la derecha */
+  list-style: none; /*Para que no tenga el punto*/
+  margin: 0;
+  padding: 0;
+  align-items: center; /*Para que los li queden alineados verticalmente*/
+}
+
+/* se muestra el submenú cuando el mouse está sobre el li principal */
+.Li_Menu_Accesorios:hover .div_submenu_accesorios {
+  display: block; /* Mostrar el submenú */
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Estilo del ítem principal del menú */
+.Li_Menu_Accesorios {
+  text-decoration: none; /*Para que no tenga subrayado*/
+  margin: 5px 5px; /*Para que no quede pegado al borde y a los otros li*/
+  position: relative; /* posición relativa para que quede debajo del menú */
+  cursor: pointer; /* para que cambie el cursor al pasar por encima*/
+  color: #000;
+  padding: 0;
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.Li_Menu_Accesorios:hover{
+  background-color: #04b0ce; /* Color de fondo al pasar el mouse */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: 0.3s; /* el tiempo que se toma en cambiar de color */
+}
+
+.Li_Menu_Accesorios  , .Li_Menu_Accesorios a{
+  display: block; /* Para que el área clickeable ocupe todo el li */
+  text-decoration: none; /*Para que no tenga subrayado*/
+  padding: 0;
+  color: #000;
+  width:auto; /* Para que el ancho se ajuste al contenido */
+  height: 40px; /* Altura fija para todos los ítems */
+  margin-right: 5px; /* Espacio entre los ítems */
+  text-align: center; /* Centrar el texto */
+  
+}
+
+/* Contenedor del submenú */
+.div_submenu_accesorios {
+  display: none; /* Oculto por defecto */
+  position: absolute; /* posición absoluta para que quede debajo del menú */
+  top: 100%; /* justo debajo del li principal */
+  left: 0; /* Alineado a la izquierda del li principal */
+  background-color: #fff; /* Color de fondo del submenú */
+  z-index: 100; /* Asegura que el submenú esté por encima de otros elementos */
+  padding: 0; /* Espaciado interno */
+  margin: 0; /* Espaciado externo */
+  border-radius: 5px; /* Bordes redondeados */
+  width: 160px; /* Ancho fijo para el submenú */
+}
+
+
+/* Mostrar el submenú al pasar el mouse */
+.Li_Menu_Accesorios:hover .div_submenu_accesorios {
+  display: block; /* Mostrar el submenú */
+}
+
+/* Estilo de los enlaces dentro del submenú */
+.div_submenu_accesorios a {
+  display: block; /* Para que el área clickeable ocupe todo el ancho */
+  padding: 10px 15px; /* Espaciado interno */
+  text-decoration: none; /* Para que no tenga subrayado */
+  color: #000;
+  transition: 0.3s; /* transición suave para el hover */
+  margin: 0;
+}
+
+/* enlaces del submenú */
+.div_submenu_accesorios a:hover {
+  background-color: #14c5fb;
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+#main_accesorios {
+  width: 100%; /*Para que el bloque de productos ocupe todo el ancho de la pantalla*/
+  display: flex; /*Para que los productos queden en fila*/
+  justify-content: center; /* Centra el bloque de productos */
+  padding: 0;
+  margin: 0;
+  
+}
+
+#main_accesorios h3  {
+  text-decoration: none; /*Para que no tenga subrayado*/
+  font-family: Memsmark; /*Defino la tipografia*/
+  font-weight: 100; /*Defino el grosor de la tipografia*/
+  letter-spacing: 1px; /*Defino el espacio entre letras*/
+  padding: 0;
+}
+
+#main_accesorios p {
+  font-weight: 600; /*Defino el grosor de la tipografia*/
+  padding: 0; 
+  margin: 0;
+}
+
+
+
+.Info_Flex {
+  display: flex; /*Para que los productos queden en fila*/
+  gap: 20px; /*separa cada producto*/
+}
+
+
+.Info_Flex a{
+  text-decoration: none; /*Para que no tenga subrayado*/
+  color: #000;
+  width: 280px; /* Ancho fijo para los productos */
+  height: 320px; /* Alto fijo para los productos */
+  border: #000 1px solid; /* Bordes de los productos */
+  background-color: #fff;
+  border-radius: 15px; /* Bordes redondeados */
+}
+
+.Info_Flex a:hover{
+  background-color: #16F20F;
+  transition: 0.3s; /* el tiempo que se toma en cambiar de color */
+}
+
+.img_productos_accesorios{
+  width: 200px; /* Ancho fijo para las imágenes */
+  height: 200px; /* Alto fijo para las imágenes */
+}
+
+#div_tabla_accesorios {
+  display: flex; /*Para que la tabla quede en fila*/
+  justify-content: center; /* Centra la tabla */
+  padding: 20px 0; /* Espaciado arriba y abajo de la tabla */
+  margin: 0; /* Elimino el margin */
+}
+
+#tabla_accesorios {
+  width: 90%; /*Para que la tabla ocupe el 90% del ancho de la pantalla*/
+  margin: 0;
+}
+
+#tabla_accesorios th{
+  background-color: #16F20F;
+  border-collapse: collapse; /*Para que no haya espacio entre las celdas*/
+}
+
+#tabla_accesorios th, #tabla_accesorios td {
+  color: #000; /* Color del texto */
+  border: 1px solid #000; /* Bordes de las celdas */
+  padding: 8px; /* Espaciado interno */
+}
+
+#th5_accesorios , #th4_accesorios,#th3_accesorios{
+  width: 140px; /* Ancho fijo para las columnas 3,4 y 5 */
+  color: #000; /* Color del texto */
+}
+
+
+
+
+/*--------------- Formulario de accesorios ------------- */
+#Body_Formulario_Accesorios {
+    margin: 20px;
+    color: #000;
+    background: radial-gradient(circle, #271ff7, #04b0ce); /* Degradado de azul a celeste */
+    
+}
+#Form_Accesorios {
+    display: flex; /*Para que los elementos del formulario queden en columna*/
+    flex-direction: column; /*Para que los elementos del formulario queden en columna*/
+    width: 400px; /*Ancho fijo para el formulario*/
+    margin: auto; /*Para que el formulario quede centrado*/
+}
+.Input_Form_Accesorios {
+    margin-bottom: 10px; /*Espacio entre los elementos del formulario*/
+    padding: 8px; /*Espacio interno*/
+    font-size: 14px; /*Tamaño de la letra*/
+  }
+
+#Submit_Form_Accesorios {
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; /*Para que el submit no tenga bordes*/
+    cursor: pointer; /*Para que el cursor cambie al pasar por encima*/
+}
+
+#Submit_Form_Accesorios:hover {
+    background-color: #45a049;
+}
+
+
+
+/*nosotros*/
+
+
+/*motos*/
+/* Estilo para la tabla */
+.tabla-motos {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.tabla-motos h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #16F20F;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  font-family: cursive;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #16F20F;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+}
+/*hasta aca seria lo mio jeremias*/
+
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 50px; /* Más fino */
+  background: #000; /* Fondo negro */
+  display: flex;
+  align-items: center;
+  margin: 20px 0; /* separación arriba y abajo */
+}
+
+.marquee {
+  display: flex;
+  animation: marquee-scroll 15s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  padding-right: 50px; /* espacio entre repeticiones */
+}
+
+/* Animación */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/*hasta aca es lo mio jeremias sigan de aca para delnate*/
+
