@@ -950,4 +950,5 @@ body.angel-motos {
   background: #444;
   transform: scale(1.1);
 }
+.image {display: flex; justify-content: center; align-items: center;}
 
