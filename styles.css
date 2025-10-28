@@ -493,14 +493,6 @@ body {
   align-items: center; /*Para que los li queden alineados verticalmente*/
 }
 
-/* se muestra el submenú cuando el mouse está sobre el li principal */
-.Li_Menu_Accesorios:hover .div_submenu_accesorios {
-  display: block; /* Mostrar el submenú */
-  margin: 0;
-  padding: 0;
-  
-}
-
 /* Estilo del ítem principal del menú */
 .Li_Menu_Accesorios {
   text-decoration: none; /*Para que no tenga subrayado*/
@@ -531,8 +523,9 @@ body {
 }
 
 /* Contenedor del submenú */
+/* se muestra el submenú cuando el mouse está sobre el li principal */
 .div_submenu_accesorios {
-  display: none; /* Oculto por defecto */
+  display: none; /* Oculto por defecto el submenu*/
   position: absolute; /* posición absoluta para que quede debajo del menú */
   top: 100%; /* justo debajo del li principal */
   left: 0; /* Alineado a la izquierda del li principal */
