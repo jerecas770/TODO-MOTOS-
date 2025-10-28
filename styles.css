@@ -412,7 +412,7 @@ body {
   border-radius: 1px;        /* Opcional: bordes redondeados */
 }
 
-
+/*HASTA ACA JEREMIAS*/
 
 /*-----------------------------Accesorios------------------------------*/
 
@@ -689,7 +689,7 @@ body {
 .tabla-motos h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #16F20F;
+  color: #16f20f;
 }
 
 table {
@@ -750,5 +750,198 @@ tr:hover {
     transform: translateX(-100%);
   }
 }
-/*hasta aca es lo mio jeremias sigan de aca para delnate*/
+
+ /* ------- MOTOS -----------*/
+/* === General === */
+body.angel-motos {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* === Header === */
+.angel-header {
+  background: #16F20F;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.angel-logo img {
+  height: 60px;
+}
+
+.angel-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.angel-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.angel-nav a:hover {
+  color: orange;
+}
+
+/* === Hero === */
+.angel-hero {
+  background: url('motos-clasicas.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.angel-hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.angel-hero-text p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* === Historia === */
+.angel-historia {
+  background: rgb(255, 255, 255);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.angel-historia h2 {
+  color: #e63946;
+  margin-bottom: 20px;
+}
+.angel-historia p {
+  color: #ff0404; 
+}
+
+/* === Video === */
+.angel-video-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  background: #000;
+}
+
+.angel-video {
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* === Ventajas === */
+.angel-ventajas {
+  background: #fff3e6;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.angel-ventajas h2 {
+  color: #ff6600;
+}
+.angel-ventajas p {
+  color: #ff6600;
+} 
+
+/* === Botones === */
+.angel-botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 40px 20px;
+  background: #222;
+}
+
+.angel-btn {
+  background: #16F20F;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.angel-btn:hover {
+  background: #ff3300;
+}
+
+/* === Modelos === */
+.angel-modelos {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.angel-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.angel-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.angel-card:hover {
+  transform: scale(1.05);
+}
+
+.angel-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+/* === Footer === */
+.angel-footer {
+  background: #16f20f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.social-btn {
+  width: 50px;
+  height: 50px;
+  background: #24292e; 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #444;
+  transform: scale(1.1);
+}
+.image {display: flex; justify-content: center; align-items: center;}
 
