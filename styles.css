@@ -642,13 +642,13 @@ body {
 
 
 /*--------------- Formulario de accesorios ------------- */
-#Body_Formulario_Accesorios {
+.Body_Formulario_Accesorios {
     margin: 20px;
     color: #000;
     background: radial-gradient(circle, #271ff7, #04b0ce); /* Degradado de azul a celeste */
     
 }
-#Form_Accesorios {
+.Form_Accesorios {
     display: flex; /*Para que los elementos del formulario queden en columna*/
     flex-direction: column; /*Para que los elementos del formulario queden en columna*/
     width: 400px; /*Ancho fijo para el formulario*/
@@ -660,14 +660,14 @@ body {
     font-size: 14px; /*Tamaño de la letra*/
   }
 
-#Submit_Form_Accesorios {
+.Submit_Form_Accesorios {
     background-color: #4CAF50; 
     color: white; 
     border: none; /*Para que el submit no tenga bordes*/
     cursor: pointer; /*Para que el cursor cambie al pasar por encima*/
 }
 
-#Submit_Form_Accesorios:hover {
+.Submit_Form_Accesorios:hover {
     background-color: #45a049;
 }
 
