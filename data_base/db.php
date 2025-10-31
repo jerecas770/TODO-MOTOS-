@@ -9,7 +9,7 @@
 </head>
 
 <body class="Body_Formulario_Accesorios"> 
-    <form class="Form_Accesorios" method = "get">
+    <form class="Form_Accesorios" method = "post">
         <input  type="hidden" name="Productos" >
         <input  class="Input_Form_Accesorios" type="text" name="titulo" placeholder="Titulo" required><br>
         <input  class="Input_Form_Accesorios" type="text" name="marca" placeholder="Marca" required><br>
@@ -26,26 +26,35 @@
 </body>
 </html>
 <?php 
+//incluyo el modulo o archivo que contiene la conexion
+include "conexion.php";
+
+
+
 //variables que almacenaran los datos ingresados
 
-//esto es para ocultar el warning que aparece
-if(isset($_GET['Productos']))
+//esto es para ocultar el warning que aparece 
+if(isset($_POST['Productos']))
 {
-$titulo = $_GET['titulo'];
-$marca = $_GET['marca'];
-$categoria = $_GET['categoria'];
-$modelo = $_GET['modelo'];
-$caracteristica1 = $_GET['caracteristica1'];
-$caracteristica2 = $_GET['caracteristica2'];
-$caracteristica3 = $_GET['caracteristica3'];
-$precio = $_GET['precio'];
+$titulo = $_POST['titulo'];
+$marca = $_POST['marca'];
+$categoria = $_POST['categoria'];
+$modelo = $_POST['modelo'];
+$caracteristica1 = $_POST['caracteristica1'];
+$caracteristica2 = $_POST['caracteristica2'];
+$caracteristica3 = $_POST['caracteristica3'];
+$precio = $_POST['precio'];
 
-// creo la conexion con la base de datos
-$servidor = "localhost";
-$usuario = "root";
-$contraseña = "";
-$dataBase = "todo_motos";
-$conexion = mysqli_connect($servidor, $usuario, $contraseña, $dataBase);
+
+
+$conexion = conexiondb();
+
+if($conexion){
+    echo "Se conecto a la base de datos: ", $dataBase;
+}
+else{
+    echo "No se pudo conectar a la base de datos: ", $dataBase;
+}
 
 //creo una consulta
 $cargardatos = "insert into productos (titulo, marca, categoria, modelo, caracteristica1, caracteristica2, caracteristica3, precio)
