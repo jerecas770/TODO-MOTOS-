@@ -493,14 +493,6 @@ body {
   align-items: center; /*Para que los li queden alineados verticalmente*/
 }
 
-/* se muestra el submenú cuando el mouse está sobre el li principal */
-.Li_Menu_Accesorios:hover .div_submenu_accesorios {
-  display: block; /* Mostrar el submenú */
-  margin: 0;
-  padding: 0;
-  
-}
-
 /* Estilo del ítem principal del menú */
 .Li_Menu_Accesorios {
   text-decoration: none; /*Para que no tenga subrayado*/
@@ -531,8 +523,9 @@ body {
 }
 
 /* Contenedor del submenú */
+/* se muestra el submenú cuando el mouse está sobre el li principal */
 .div_submenu_accesorios {
-  display: none; /* Oculto por defecto */
+  display: none; /* Oculto por defecto el submenu*/
   position: absolute; /* posición absoluta para que quede debajo del menú */
   top: 100%; /* justo debajo del li principal */
   left: 0; /* Alineado a la izquierda del li principal */
@@ -649,13 +642,13 @@ body {
 
 
 /*--------------- Formulario de accesorios ------------- */
-#Body_Formulario_Accesorios {
+.Body_Formulario_Accesorios {
     margin: 20px;
     color: #000;
     background: radial-gradient(circle, #271ff7, #04b0ce); /* Degradado de azul a celeste */
     
 }
-#Form_Accesorios {
+.Form_Accesorios {
     display: flex; /*Para que los elementos del formulario queden en columna*/
     flex-direction: column; /*Para que los elementos del formulario queden en columna*/
     width: 400px; /*Ancho fijo para el formulario*/
@@ -667,14 +660,14 @@ body {
     font-size: 14px; /*Tamaño de la letra*/
   }
 
-#Submit_Form_Accesorios {
+.Submit_Form_Accesorios {
     background-color: #4CAF50; 
     color: white; 
     border: none; /*Para que el submit no tenga bordes*/
     cursor: pointer; /*Para que el cursor cambie al pasar por encima*/
 }
 
-#Submit_Form_Accesorios:hover {
+.Submit_Form_Accesorios:hover {
     background-color: #45a049;
 }
 
