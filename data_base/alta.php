@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body class="Body_Formulario_Accesorios">
+
+    <a href="?alta"><button>ALTA PRODUCTOS</button></a>
+    <a href="baja.php"><button>BAJA PRODUCTOS</button></a>
+    <a href="modificacion.php"><button>MODIFICACION PRODUCTOS</button></a>
+
+    <?php 
+    if(isset($_GET['alta']))
+    {
+
+    ?>
+
+
     <form class="Form_Accesorios" method = "post">
         <input  type="hidden" name="Productos" >
         <input  class="Input_Form_Accesorios" type="text" name="titulo" placeholder="Titulo" required><br>
@@ -20,13 +33,8 @@
     </form>
     <?php 
 /*
-require "conexion.php"; 
-$codigo=$_POST['codigo']; 
-$nombre=$_POST['nombre']; 
-$ape=$_POST['apellido']; 
-$dni=$_POST['dni']; 
-$tel=$_POST['tel']; 
- 
+
+
 $cnn=mysqli_connect($servidor, $usuario, $contraseña,$bd)or die("No se encuentra la base de d
  atos $bd"); 
 mysqli_set_charset($cnn,"utf8"); 
@@ -51,8 +59,10 @@ include "conexion.php";
 //variables que almacenaran los datos ingresados
 
 //esto es para ocultar el warning que aparece 
-if(isset($_POST['Productos']))
+if (isset($_POST['Productos']))
 {
+
+
 $titulo = $_POST['titulo'];
 $marca = $_POST['marca'];
 $categoria = $_POST['categoria'];
@@ -62,9 +72,12 @@ $caracteristica2 = $_POST['caracteristica2'];
 $caracteristica3 = $_POST['caracteristica3'];
 $precio = $_POST['precio'];
 
+$servidor = "localhost";
+$usuario = "root";
+$contraseña = "";
+$dataBase = "todo_motos";
 
-
-$conexion = conexiondb();
+$conexion = conexion($servidor, $usuario, $contraseña, $dataBase);
 
 if($conexion){
     echo "Se conecto a la base de datos: ", $dataBase;
@@ -73,19 +86,22 @@ else{
     echo "No se pudo conectar a la base de datos: ", $dataBase;
 }
 
-//creo una consulta
-$cargardatos = "insert into productos (titulo, marca, categoria, modelo, caracteristica1, caracteristica2, caracteristica3, precio)
+//creo una consulta para insertar datos a la tabla
+$in_datos = "insert into productos (titulo, marca, categoria, modelo, caracteristica1, caracteristica2, caracteristica3, precio) 
 VALUES ('$titulo', '$marca', '$categoria', '$modelo', '$caracteristica1', '$caracteristica2', '$caracteristica3', $precio)";
 
 // Ejecuto la consulta
-mysqli_query($conexion, $cargardatos);
+
+mysqli_query($conexion, $in_datos);
 
 
 
 
 
-} 
 
+
+}
+}
 ?> 
 
 

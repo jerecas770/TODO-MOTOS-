@@ -10,6 +10,9 @@
 
 <body > 
     
+    <a href="alta.php"><button>ALTA PRODUCTOS</button></a>
+    <a href="baja.php"><button>BAJA PRODUCTOS</button></a>
+    <a href="modificacion.php"><button>MODIFICACION PRODUCTOS</button></a>
 
 
 </body>
