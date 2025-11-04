@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,9 +9,21 @@
 <body class="Body_Formulario_Accesorios">
 
     <a href="alta.php"><button>ALTA PRODUCTOS</button></a>
-    <a href="baja.php"><button>BAJA PRODUCTOS</button></a>
     <a href="modificacion.php"><button>MODIFICACION PRODUCTOS</button></a><br>
+    <a href="?mostrarDatos"><button>VER PRODUCTOS</button></a>
 
+<?php 
+
+
+//solo muestro los datos si aprieta el boton VER PRODUCTOS
+if(isset($_GET['mostrarDatos']))
+{
+
+
+
+?>
+<form action="">
+<!-- creo una tabla en la que voy a mostrar los datos-->
 <table> 
 <tr><th>ID</th> 
 <th>Titulo</th> 
@@ -25,24 +37,23 @@
 </tr>
 
 <?php 
-
+// inluyo al modulo o biblioteca conexion.php
 include "conexion.php";
 
-$servidor = "localhost";
-$usuario = "root";
-$contraseña = "";
-$dataBase = "todo_motos";
 
-$conexion = conexion($servidor, $usuario, $contraseña, $dataBase);
+// me conecto a la base de datos
+$conexion = conexion();
 
+// creo la consulta para selecionar y mostrar los registros de datos
 $out_datos = "select * from productos";
-
 $registros = mysqli_query($conexion,$out_datos);
 
+//muestro los datos en una tabla mientras existan datos
 while($registro=mysqli_fetch_row($registros)){ 
     ?><tr> 
     
-        
+    
+    
     <td><?php echo $registro[0]?></td> 
     <td><?php echo $registro[1]?></td> 
     <td><?php echo $registro[2]?></td> 
@@ -50,23 +61,37 @@ while($registro=mysqli_fetch_row($registros)){
     <td><?php echo $registro[4]?></td>
     
     <?php 
+
+    // si algun compo esta vacio lo reemplazo con ---
     for ($i = 5; $i < 8; $i++) {
+
+
     echo "<td>";
+
     if ($registro[$i] == "") {
         echo "---";
-    } else {
+
+    } 
+    else 
+    {
         echo $registro[$i];
     }
+
     echo "</td>";
     }
     ?>
 
     <td><?php echo $registro[8]?></td> 
 </tr> 
+
 <?php 
+
 } 
+}
+
 ?> 
 </table> 
+</form>
 
 
 
@@ -79,6 +104,30 @@ while($registro=mysqli_fetch_row($registros)){
 
 
 /*
+<form method=POST> 
+<table> 
+<tr><th>Codigo</th> 
+<th>Apellido</th> 
+<th>Nombre</th> 
+<th>DNI</th> 
+<th>Telefono</th> 
+</tr> 
+<?php 
+    while($fila=mysqli_fetch_assoc($resultado)){ 
+        ?><tr> 
+        <td><input type=radio name=cE value=<?php echo($fila['codigoEmpleado'])?>><?php echo(
+ $fila['codigoEmpleado'])?></td> 
+        <td><?php echo($fila['apellido'])?></td> 
+        <td><?php echo($fila['nombre'])?></td> 
+        <td><?php echo($fila['dni'])?></td> 
+        <td><?php echo($fila['telefono'])?></td> 
+    </tr> 
+<?php  
+    } ?> 
+</table> 
+<input type=submit value=Modificar formaction=pmodificar.php> 
+<input type=submit value=Eliminar formaction=peliminar.php> 
+</form>
 <body> 
 <?php 
 $paraBorrar=$_POST['cE']; 
