@@ -8,8 +8,7 @@
 </head>
 <body class="Body_Formulario_Accesorios">
 
-    <a href="baja.php"><button>BAJA PRODUCTOS</button></a>
-    <a href="modificacion.php"><button>MODIFICACION PRODUCTOS</button></a>
+    <a href="menu.php"><button>MENU</button></a>
 
     <form class="Form_Accesorios" method = "post">
         <input  type="hidden" name="Productos" >
@@ -26,7 +25,7 @@
     <?php 
 
 //incluyo el modulo o archivo que contiene la conexion
-include "conexion.php";
+include "funciones\ABM.funciones.php";
 
 
 
@@ -35,8 +34,6 @@ include "conexion.php";
 //esto es para ocultar el warning que aparece 
 if (isset($_POST['Productos']))
 {
-
-
 $titulo = $_POST['titulo'];
 $marca = $_POST['marca'];
 $categoria = $_POST['categoria'];
@@ -46,31 +43,7 @@ $caracteristica2 = $_POST['caracteristica2'];
 $caracteristica3 = $_POST['caracteristica3'];
 $precio = $_POST['precio'];
 
-
-
-$conexion = conexion();
-
-if($conexion){
-    echo "Se conecto a la base de datos: ", $dataBase;
-}
-else{
-    echo "No se pudo conectar a la base de datos: ", $dataBase;
-}
-
-//creo una consulta para insertar datos a la tabla
-$in_datos = "insert into productos (titulo, marca, categoria, modelo, caracteristica1, caracteristica2, caracteristica3, precio) 
-VALUES ('$titulo', '$marca', '$categoria', '$modelo', '$caracteristica1', '$caracteristica2', '$caracteristica3', $precio)";
-
-// Ejecuto la consulta
-
-mysqli_query($conexion, $in_datos);
-
-
-
-
-
-
-
+carga($titulo , $marca , $categoria , $modelo , $caracteristica1 , $caracteristica2 , $caracteristica3 , $precio);
 }
 
 ?> 

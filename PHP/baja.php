@@ -8,16 +8,13 @@
 </head>
 <body class="Body_Formulario_Accesorios">
 
-    <a href="alta.php"><button>ALTA PRODUCTOS</button></a>
-    <a href="modificacion.php"><button>MODIFICACION PRODUCTOS</button></a><br>
-    <a href="?mostrarDatos"><button>VER PRODUCTOS</button></a>
+    <a href="menu.php"><button>MENU</button></a>
 
 <?php 
 
 
 //solo muestro los datos si aprieta el boton VER PRODUCTOS
-if(isset($_GET['mostrarDatos']))
-{
+
 
 
 
@@ -51,21 +48,10 @@ $registros = mysqli_query($conexion,$out_datos);
 //muestro los datos en una tabla mientras existan datos
 while($registro=mysqli_fetch_row($registros)){ 
     ?><tr> 
-    
-    
-    
-    <td><?php echo $registro[0]?></td> 
-    <td><?php echo $registro[1]?></td> 
-    <td><?php echo $registro[2]?></td> 
-    <td><?php echo $registro[3]?></td>
-    <td><?php echo $registro[4]?></td>
-    
     <?php 
 
     // si algun compo esta vacio lo reemplazo con ---
-    for ($i = 5; $i < 8; $i++) {
-
-
+    for ($i = 0; $i < 9; $i++) {
     echo "<td>";
 
     if ($registro[$i] == "") {
@@ -80,14 +66,12 @@ while($registro=mysqli_fetch_row($registros)){
     echo "</td>";
     }
     ?>
-
-    <td><?php echo $registro[8]?></td> 
 </tr> 
 
 <?php 
 
 } 
-}
+
 
 ?> 
 </table> 
