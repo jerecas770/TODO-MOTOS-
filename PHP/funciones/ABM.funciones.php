@@ -21,7 +21,6 @@ function carga($titulo , $marca , $categoria , $modelo , $caracteristica1 , $car
     VALUES ('$titulo', '$marca', '$categoria', '$modelo', '$caracteristica1', '$caracteristica2', '$caracteristica3', $precio)";
 
     // Ejecuto la consulta
-
     mysqli_query($conexion, $SQL);
 
 }
@@ -66,6 +65,15 @@ while($registro=mysqli_fetch_row($registros)){
 }
 }
 ?> 
+
+
+<?php 
+
+function buscar(){
+    
+};
+
+?>
 
 
 </body>

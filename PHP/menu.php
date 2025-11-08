@@ -9,7 +9,7 @@
 <body class="Body_Formulario_Accesorios">
 
     <a href="carga.php"><button>Cargar registro</button></a>
-    <a href="buscar"><button>Buscar registro</button></a>
+    <a href="buscador.php"><button>Buscar registro</button></a>
     <a href="registros.php"><button>Mostrar registros</button></a>
 
     

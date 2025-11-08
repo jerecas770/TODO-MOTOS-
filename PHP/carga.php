@@ -25,7 +25,7 @@
     <?php 
 
 //incluyo el modulo o archivo que contiene la conexion
-include "funciones\ABM.funciones.php";
+include "funciones/ABM.funciones.php";
 
 
 
@@ -43,7 +43,17 @@ $caracteristica2 = $_POST['caracteristica2'];
 $caracteristica3 = $_POST['caracteristica3'];
 $precio = $_POST['precio'];
 
-carga($titulo , $marca , $categoria , $modelo , $caracteristica1 , $caracteristica2 , $caracteristica3 , $precio);
+// cargo el producto y verifico si se pudo cargar
+// tuve que negar carga() con ! por que al ser una funcion que no devuelve nada, por defecto su valor es false
+if(!carga($titulo , $marca , $categoria , $modelo , $caracteristica1 , $caracteristica2 , $caracteristica3 , $precio))
+{
+    echo "producto cargado";
+}
+else
+{
+    echo "no se pudo cargar el producto";
+}
+
 }
 
 ?> 
