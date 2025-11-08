@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     
@@ -68,12 +69,85 @@ while($registro=mysqli_fetch_row($registros)){
 
 
 <?php 
-
-function buscar(){
+function buscar($opcion,$busqueda){
     
-};
+    $conexion = conexion(); 
+
+    switch ($opcion) {
+        case 'id':
+           $SQL = "select * from productos WHERE ID_producto = '$busqueda'";
+            break;
+        case 'titulo':
+            $SQL = "select * from productos WHERE titulo LIKE '%$busqueda%'";
+            break;
+        
+        default:
+           echo "error de busquda";
+            break;
+    }
+
+$resultado= mysqli_query($conexion, $SQL);
+?>
+    <form action="">
+
+    <table>
+
+    <tr><th>ID</th> 
+    <th>Titulo</th> 
+    <th>Marca</th> 
+    <th>Categoria</th> 
+    <th>Modelo</th> 
+    <th>Caracteristica1</th> 
+    <th>Caracteristica2</th> 
+    <th>Caracteristica3</th> 
+    <th>Precio</th> 
+    <th></th>
+    </tr>
+    <?php 
+    // mientras existan coincidencias 
+    while($registro=mysqli_fetch_row($resultado)){ 
+    ?>
+    <tr> 
+    
+    <?php 
+    // si algun compo esta vacio lo reemplazo con ---
+    for ($i = 0; $i < 9; $i++) {
+    ?>
+    <td>
+    <?php
+    if ($registro[$i] == "") {
+        echo "---";
+
+    } 
+    else 
+    {
+        echo $registro[$i];
+    }
+    ?>
+    </td>
+
+
+    <?php
+    }
+
+    // despues de cada registro pongo un boton de seleccion
+    ?>
+    
+    <td><input type="radio" name="id" value="<?php echo $registro[0];?>" required></td>
+    
+    </tr> 
+
+<?php 
+}
 
 ?>
+</table>  
+</form>
+<?php 
+
+}
+?> 
+
 
 
 </body>
