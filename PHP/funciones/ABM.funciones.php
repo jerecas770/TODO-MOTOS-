@@ -142,8 +142,30 @@ $resultado= mysqli_query($conexion, $SQL);
 
 ?>
 </table>  
+
+<input type=submit value=modificar name="ModiElim"> 
+<input type=submit value=eliminar name="ModiElim"> 
+
+
 </form>
 <?php 
+
+if (isset($_POST['ModiElim'])) {
+    $ModiELim = $_POST['ModiElim'];
+    switch ($ModiELim) {
+        case 'modificar':
+            # code...
+            break;
+        
+        case 'eliminar':
+        # code...
+        break;
+        
+        default:
+            # code...
+            break;
+    }
+}
 
 }
 ?> 
