@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,152 +7,29 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body class="Body_Formulario_Accesorios">
-
-    <a href="menu.php"><button>MENU</button></a>
-
+    <a href="menu.php"><button>MENU</button></a><br>
 <?php 
+require "funciones/ABM.funciones.php"; 
+// guardo el id del producto a eliminar
+$borrar=$_POST['borrar']; 
+ 
+$conexion= conexion();
+ 
+// elimino todo el registro del producto
+$SQL="delete from productos where ID_producto='$borrar'"; 
+ 
+$resultado=mysqli_query($conexion,$SQL); 
 
-
-//solo muestro los datos si aprieta el boton VER PRODUCTOS
-
-
-
-
-?>
-<form action="">
-<!-- creo una tabla en la que voy a mostrar los datos-->
-<table> 
-<tr><th>ID</th> 
-<th>Titulo</th> 
-<th>Marca</th> 
-<th>Categoria</th> 
-<th>Modelo</th> 
-<th>Caracteristica1</th> 
-<th>Caracteristica2</th> 
-<th>Caracteristica3</th> 
-<th>Precio</th> 
-</tr>
-
-<?php 
-// inluyo al modulo o biblioteca conexion.php
-include "conexion.php";
-
-
-// me conecto a la base de datos
-$conexion = conexion();
-
-// creo la consulta para selecionar y mostrar los registros de datos
-$out_datos = "select * from productos";
-$registros = mysqli_query($conexion,$out_datos);
-
-//muestro los datos en una tabla mientras existan datos
-while($registro=mysqli_fetch_row($registros)){ 
-    ?><tr> 
-    <?php 
-
-    // si algun compo esta vacio lo reemplazo con ---
-    for ($i = 0; $i < 9; $i++) {
-    echo "<td>";
-
-    if ($registro[$i] == "") {
-        echo "---";
-
-    } 
-    else 
-    {
-        echo $registro[$i];
-    }
-
-    echo "</td>";
-    }
-    ?>
-</tr> 
-
-<?php 
-
+if(mysqli_affected_rows($conexion)>0){ 
+    echo "<br>Se elimino el producto $borrar de la base de datos"; 
+} 
+else{ 
+    echo "<br>No se pudo eliminar"; 
+    echo "Error:".mysqli_sqlstate($conexion); 
 } 
 
-
 ?> 
-</table> 
-</form>
-
 
 
 </body>
 </html>
-
-<?php 
-
-
-
-
-/*
-<form method=POST> 
-<table> 
-<tr><th>Codigo</th> 
-<th>Apellido</th> 
-<th>Nombre</th> 
-<th>DNI</th> 
-<th>Telefono</th> 
-</tr> 
-<?php 
-    while($fila=mysqli_fetch_assoc($resultado)){ 
-        ?><tr> 
-        <td><input type=radio name=cE value=<?php echo($fila['codigoEmpleado'])?>><?php echo(
- $fila['codigoEmpleado'])?></td> 
-        <td><?php echo($fila['apellido'])?></td> 
-        <td><?php echo($fila['nombre'])?></td> 
-        <td><?php echo($fila['dni'])?></td> 
-        <td><?php echo($fila['telefono'])?></td> 
-    </tr> 
-<?php  
-    } ?> 
-</table> 
-<input type=submit value=Modificar formaction=pmodificar.php> 
-<input type=submit value=Eliminar formaction=peliminar.php> 
-</form>
-<body> 
-<?php 
-$paraBorrar=$_POST['cE']; 
-echo "Usted va a borrar el codigo de empleado: $paraBorrar"; 
-echo "<br>Esta seguro que desea continuar<br>"; 
-?> 
-<form method=post> 
-<input type=hidden name="borra" value=<?php echo($paraBorrar)?> > 
-<input type=submit value="Si" formaction=eliminar.php> 
-<input type=submit value="No" formaction=form1.php> 
-</form> 
-</body></html> 
-
-
-
-
-require "conexion.php"; 
-$siBorra=$_POST['borra']; 
- 
-echo "Borra $siBorra"; 
- 
-$cnn=mysqli_connect($servidor, $usuario, $contraseña,$bd)or die("No se encuentra la base de d
- atos $bd"); 
- 
-$sql="delete from empleados where codigoEmpleado='$siBorra'"; 
- 
-$resultado=mysqli_query($cnn,$sql); 
- 
-if(mysqli_affected_rows($cnn)>0){ 
-    echo "<br>Se elimino al empleado $siBorra de la base de datos"; 
-} 
-else{ 
-    echo "<br>No se pudo eliminar"; 
-    echo "Error:".mysqli_sqlstate($cnn); 
-} 
-
-*/
-
-
-
-
-
- 
-?>
