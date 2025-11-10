@@ -70,13 +70,22 @@ while($registro=mysqli_fetch_row($registros)){
 
 <?php 
 function buscar($opcion,$busqueda){
-    
+    //me conecto a la base de datos
     $conexion = conexion(); 
 
+    // dependiendo de la opcion elegida busco lo ingresado por ID o por Titulo
     switch ($opcion) {
         case 'id':
-           $SQL = "select * from productos WHERE ID_producto = '$busqueda'";
-            break;
+            //todo lo ingresado es del tipo texto pero si es de tipo numerico pregunto con is_numeric() y me devuelve True o False
+            if (is_numeric($busqueda)) {
+                $SQL = "select * from productos WHERE ID_producto = '$busqueda'";
+                break;
+            }
+            else {
+                echo "Debe ingresar un ID (Numero entero)";
+                exit();
+            }
+           
         case 'titulo':
             $SQL = "select * from productos WHERE titulo LIKE '%$busqueda%'";
             break;
@@ -87,8 +96,11 @@ function buscar($opcion,$busqueda){
     }
 
 $resultado= mysqli_query($conexion, $SQL);
+
+if (mysqli_affected_rows ($conexion) > 0) {
+
 ?>
-    <form action="">
+    <form action="" method="post">
 
     <table>
 
@@ -143,38 +155,19 @@ $resultado= mysqli_query($conexion, $SQL);
 ?>
 </table>  
 
-<input type=submit value=modificar name="ModiElim"> 
-<input type=submit value=eliminar name="ModiElim"> 
+<input type="submit" name="validar" value="modificar" formaction="./confirmacionAM.php"> 
+<input type="submit" name="validar" value="eliminar" formaction="./confirmacionAM.php"> 
 
 
 </form>
+
 <?php 
-
-if (isset($_POST['ModiElim'])) {
-    $ModiELim = $_POST['ModiElim'];
-    switch ($ModiELim) {
-        case 'modificar':
-            # code...
-            break;
-        
-        case 'eliminar':
-        # code...
-        break;
-        
-        default:
-            # code...
-            break;
-    }
 }
-
+else {
+    echo "No se encontraron coincidencias";
 }
-?> 
-
-
+}
+?>
 
 </body>
-</html>
-
-
-
- 
+</html> 
