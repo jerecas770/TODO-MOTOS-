@@ -945,3 +945,68 @@ body.angel-motos {
 }
 .image {display: flex; justify-content: center; align-items: center;}
 
+
+
+
+
+
+
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.card img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+.card h3 {
+    margin: 10px 0 5px 0;
+}
+.card p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SOLO el precio queda en negrita */
+.producto-precio {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Descripción */
+.producto-desc {
+    font-weight: normal;
+    color: #555;
+    font-size: 14px;
+    margin: 5px 0 8px 0;
+    line-height: 1.2;
+}
+
+/* Stock */
+.producto-stock {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+
+
+
+
